@@ -47,6 +47,7 @@
     <style>
         body {
             font-family: "Lato", sans-serif;
+            line-height: 1.5;
         }
 
         li {
@@ -58,12 +59,25 @@
         h2,
         h3 {
             font-family: "Playfair Display SC", serif;
+            font-weight: bold;
+        }
+
+        h1,
+        h2 {
+            border-bottom: 1px solid black;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         @media print {
-            .no-print {
+
+            .no-print,
+            blockquote {
                 display: none !important;
             }
+
 
             .projects {
                 a[href]::after {
@@ -73,7 +87,7 @@
                 }
 
                 a[href] {
-                    text-decoration: none;
+                    text-decoration: none !important;
                     color: inherit;
                 }
 
@@ -93,19 +107,19 @@
             <div class="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-start sm:gap-6 md:gap-10">
                 <img class="h-16 w-16 rounded-full object-cover sm:h-16 sm:w-16" src="./profile.jpg" alt="Avatar" />
                 <div class="grow w-full text-center sm:text-start">
-                    <h1 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h1>
-                    <div class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-start mt-1">
-                        <p class="text-sm text-gray-600 sm:grow">Oldenburg, Germany</p>
-                        <p>
-                            <a href="mailto:masri_mohamad@protonmail.com"
-                                class="text-sm text-gray-600 hover:underline">masri_mohamad@protonmail.com</a>
-                        </p>
+                    <h3 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h3>
+                    <div
+                        class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-center md:text-start mt-1">
+                        <p>Oldenburg, Germany | <a target="_blank"
+                                href="mailto:masri_mohamad@protonmail.com">masri_mohamad@protonmail.com</a> | <a
+                                target="_blank" href="https://masri.blog">www.masri.blog</a></p>
                     </div>
                 </div>
             </div>
         </header>
+
         <!-- Work Experience -->
-        <section class="mb-8">
+        <section class="mb-4 md:mb-8">
             <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Work Experience"
                 data-lang-de="Berufserfahrung">
                 Work Experience
@@ -119,22 +133,18 @@
                 </h3>
                 <p class="text-sm text-gray-600">Apr 2024 – Present</p>
                 <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Code Refactoring & Optimization – Improved maintainability and performance (Vue.js, Vuex,
-    
-                                    JavaScript, Laravel)" data-lang-de="Code-Refactoring & Optimierung – Verbesserung der Wartbarkeit und Leistung (Vue.js, Vuex,
-    
-                                    JavaScript, Laravel)">
+                    <li data-lang-en="Code Refactoring & Optimization – Improved maintainability and performance (Vue.js, Vuex, JavaScript, Laravel)"
+                        data-lang-de="Code-Refactoring & Optimierung – Verbesserung der Wartbarkeit und Leistung (Vue.js, Vuex, JavaScript, Laravel)">
                         Code Refactoring & Optimization – Improved maintainability and
-                        performance (Vue.js,JavaScript, Laravel)
+                        performance (Vue.js, Vuex, JavaScript, Laravel)
                     </li>
-                    <li data-lang-en="Feature Development – Designed and implemented new features (Laravel, GraphQL, REST APIs)"
-                        data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen (Laravel, GraphQL, REST APIs)">
-                        Feature Development – Designed and implemented new features
+                    <li data-lang-en="Feature Development – Designed and implemented new features, integrating with REST APIs (Laravel, GraphQL, REST APIs)"
+                        data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen, Anbindung von REST APIs (Laravel, GraphQL, REST APIs)">
+                        Feature Development – Designed and implemented new features, integrating with REST APIs
                         (Laravel, GraphQL, REST APIs)
                     </li>
-                    <li data-lang-en="Version Control & Collaboration – Followed GitFlow for structured development (Git, GitFlow,
-                            )" data-lang-de="Versionskontrolle & Kollaboration – Anwendung von GitFlow für strukturierte Entwicklung (Git, GitFlow,
-                            )">
+                    <li data-lang-en="Version Control & Collaboration – Followed GitFlow for structured development (Git, GitFlow)"
+                        data-lang-de="Versionskontrolle & Kollaboration – Anwendung von GitFlow für strukturierte Entwicklung (Git, GitFlow)">
                         Version Control & Collaboration – Followed GitFlow for structured
                         development (Git, GitFlow)
                     </li>
@@ -151,35 +161,34 @@
                 <h3 class="font-bold">Full Stack Developer – Brainkets (Hybrid)</h3>
                 <p class="text-sm text-gray-600">Oct 2022 – Sep 2023</p>
                 <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Frontend & Backend Development – Built reusable, scalable web apps (React.js, Next.js, Redux,
-                                    Yii2, PHP,
-                                    MySQL)" data-lang-de="Frontend- & Backend-Entwicklung – Entwicklung wiederverwendbarer, skalierbarer Webanwendungen (React.js, Next.js, Redux,
-                                    Yii2, PHP,
-                                    MySQL)">
-                        Frontend & Backend Development – Built reusable, scalable web apps
-                        (React.js, Next.js, Redux, Yii2, PHP, MySQL)
+                    <li data-lang-en="Frontend Development – Developed interactive UIs and scalable web applications using React.js, Next.js, and Redux for state management."
+                        data-lang-de="Frontend-Entwicklung – Entwicklung interaktiver Benutzeroberflächen und skalierbarer Webanwendungen mit React.js, Next.js und Redux für State Management.">
+                        Frontend Development – Developed interactive UIs and scalable web applications using React.js,
+                        Next.js,
+                        and Redux for state management. </li>
+                    <li data-lang-en="Backend Development – Built backend components and APIs (Yii2, PHP, MySQL)."
+                        data-lang-de="Backend-Entwicklung – Erstellung von Backend-Komponenten und APIs (Yii2, PHP, MySQL).">
+                        Backend Development – Built backend components and APIs (Yii2, PHP, MySQL).
                     </li>
-                    <li data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces (HTML, CSS, Tailwind
-                                    CSS,
-                                    Bootstrap)" data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen (HTML, CSS, Tailwind
-                                    CSS,
-                                    Bootstrap)">
-                        UI/UX Implementation – Translated Figma designs into responsive
-                        interfaces (HTML, CSS, Tailwind CSS, Bootstrap)
-                    </li>
+                    <li data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS, Tailwind CSS, Material UI and Bootstrap."
+                        data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen mittels HTML, CSS, Tailwind CSS, Material UI und Bootstrap.">
+                        UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS,
+                        Tailwind
+                        CSS, and Bootstrap. </li>
+                    <li data-lang-en="API Integration – Connected frontend components to distributed REST-based backend systems (REST APIs, SQL, Postman)."
+                        data-lang-de="API-Integration – Anbindung von Frontend-Komponenten an verteilte REST-basierte Backend-Systeme (REST APIs, SQL, Postman).">
+                        API Integration – Connected frontend components to distributed REST-based backend systems (REST
+                        APIs,
+                        SQL, Postman). </li>
+                    <li data-lang-en="Agile Collaboration – Actively contributed to software development within an Agile team environment (GitHub, Git, SDLC)."
+                        data-lang-de="Agile Zusammenarbeit – Aktive Mitwirkung an der Softwareentwicklung in einem agilen Teamumfeld (GitHub, Git, SDLC).">
+                        Agile Collaboration – Actively contributed to software development within an Agile team
+                        environment
+                        (GitHub, Git, SDLC). </li>
                     <li data-lang-en="SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization)"
                         data-lang-de="SEO & Performance Optimierung – Verbesserung der Geschwindigkeit und Auffindbarkeit (SSR, Meta-Optimierung)">
                         SEO & Performance Optimization – Enhanced speed and
                         discoverability (SSR, Meta Optimization)
-                    </li>
-                    <li data-lang-en="API Development & Integration – Worked with RESTful services (Postman, REST APIs, SQL)"
-                        data-lang-de="API-Entwicklung & Integration – Arbeit mit RESTful Services (Postman, REST APIs, SQL)">
-                        API Development & Integration – Worked with RESTful services
-                        (Postman, REST APIs, SQL)
-                    </li>
-                    <li data-lang-en="Agile Workflow – Collaborated in Agile teams (GitHub, Git, SDLC)"
-                        data-lang-de="Agile Arbeitsweise – Zusammenarbeit in agilen Teams (GitHub, Git, SDLC)">
-                        Agile Workflow – Collaborated in Agile teams (GitHub, Git, SDLC)
                     </li>
                 </ul>
             </div>
@@ -217,13 +226,13 @@
         </section>
 
         <!-- Skills -->
-        <section class="mb-8">
+        <section class="mb-4 md:mb-8">
             <h2 class="text-xl font-semibold mb-2">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div class="text-sm grid gap-1 space-y-2">
                 <div>
                     <h4 class="font-semibold">Frontend</h4>
                     <ul class="list-disc ml-5">
-                        <li>React.js, Vue.js , Angular.js(Vite, Next.js)</li>
+                        <li>React.js (incl. Redux, Next.js), Vue.js, Angular.js (Vite)</li>
                         <li>JavaScript & TypeScript (ES6+), JSX, HTMX</li>
                         <li>HTML5, CSS3 (Tailwind, SASS, LESS)</li>
                     </ul>
@@ -231,14 +240,13 @@
                 <div>
                     <h4 class="font-semibold">Backend & Tools</h4>
                     <ul class="list-disc ml-5">
-                        <li>Laravel, PHP (Yii2), Node.js</li>
-                        <li>MYSQL, MongoDB, Postman</li>
-                        <li>NPM, Git/GitHub/Gitlab (CI/CD)</li>
+                        <li>Laravel, PHP (Yii2), Node.js / Express</li>
+                        <li>SQL-MYSQL, NoSQL-MongoDB, Postman</li>
+                        <li>NPM, Git/GitHub/Gitlab (incl. Gitlab CI)</li>
+                        <li>Testing: Jest, Cypress </li>
                     </ul>
                 </div>
                 <div>
-                    <br />
-                    <br />
                     <h4 class="font-semibold">Other</h4>
                     <ul class="list-disc ml-5">
                         <li>Python, Java, C++, Windows, Linux, MacOS</li>
@@ -253,21 +261,21 @@
                             data-lang-de="Teamfähigkeit, Motivation, Flexibilität">
                             Teamwork, motivation, flexibility
                         </li>
-                        <li data-lang-en="Independent, accurate work style"
-                            data-lang-de="Selbstständige, genaue Arbeitsweise">
-                            Independent, accurate work style
-                        </li>
-                        <li data-lang-en="IT and process affinity, fast learner"
-                            data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe">
-                            IT and process affinity, fast learner
-                        </li>
+                        <li data-lang-en="Independent, solution-oriented work style"
+                            data-lang-de="Selbstständige, lösungsorientierte Arbeitsweise">
+                            Independent, solution-oriented work style </li>
+                        <li data-lang-en="IT and process affinity, fast learner, high implementation skills"
+                            data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe, hohes Umsetzungsvermögen">
+                            IT and process affinity, fast learner, high implementation skills </li>
+                        <li data-lang-en="Strong communication skills" data-lang-de="Kommunikationsstark">
+                            Strong communication skills </li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Education -->
-        <section class="mb-8">
+        <section class="mb-4 md:mb-8">
             <h2 class="text-xl font-semibold mb-2" data-lang-en="Education" data-lang-de="Ausbildung">
                 Education
             </h2>
@@ -281,9 +289,9 @@
                         data-lang-de="Bachelor of Science (B.Sc.) Informatik">Bachelor of Science (B.Sc.)
                         Informatik</span>
                 </strong>
-            </p>
-            <p class="text-sm text-gray-600" data-lang-en="GPA: 3.44 / 4.0" data-lang-de="Noten: 1.8">
-                Noten: 1.8
+                <span class="text-sm text-gray-600" data-lang-en="- GPA: 3.44 / 4.0" data-lang-de="- Noten: 1.8">
+                    - Noten: 1.8
+                </span>
             </p>
             <p class="text-sm mt-2"
                 data-lang-en="Focused on OOP, data structures, algorithm design, problem solving, and complexity analysis."
@@ -294,7 +302,7 @@
         </section>
 
         <!-- Achievements -->
-        <section class="mb-8">
+        <section class="mb-4 md:mb-8">
             <h2 class="text-xl font-semibold mb-2" data-lang-en="Academic Achievements"
                 data-lang-de="Akademische Leistungen">
                 Academic Achievements
@@ -313,87 +321,101 @@
         </section>
 
         <!-- Projects -->
-        <div class="projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            <section class="md:mb-8">
+        <div class="projects grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1">
+            <section class="mb-4 md:mb-8">
                 <h2 class="text-xl font-semibold mb-2" data-lang-en="Projects" data-lang-de="Projekte">
                     Projects
                 </h2>
                 <ul class="list-disc ml-5 text-sm space-y-1">
                     <li>
-                        <a target="_blank" href="https://masri.blog" class="text-blue-200 hover:underline">Masri.blog -
-                            Blog & Portfolio</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://new.gameacademy.ngo/home" class="text-blue-200 hover:underline"
+                        <a target="_blank" href="https://new.gameacademy.ngo/home" class="text-blue-200"
                             data-lang-en="Gameacademy - NGO Training & Blog"
                             data-lang-de="Gameacademy - NGO Training & Blog">Gameacademy - NGO Training & Blog</a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://propackstore.org/" class="text-blue-200 hover:underline"
+                        <a target="_blank" href="https://propackstore.org/" class="text-blue-200"
                             data-lang-en="Propackstore - Sales platform"
                             data-lang-de="Propackstore - Verkaufsplattform">Propackstore - Sales platform</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://ultrastore.me/" class="text-blue-200 hover:underline"
+                        <a target="_blank" href="http://ultrastore.me/" class="text-blue-200"
                             data-lang-en="Timesquare - E-commerce site"
                             data-lang-de="Timesquare - E-Commerce-Seite">Timesquare - E-commerce site</a>
                     </li>
                     <li>
-                        <a target="_blank" href="http://www.schooltube.app/" class="text-blue-200 hover:underline"
+                        <a target="_blank" href="http://www.schooltube.app/" class="text-blue-200"
                             data-lang-en="Schooltube - E-learning platform"
                             data-lang-de="Schooltube - E-Learning-Plattform">Schooltube - E-learning platform</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://masri-programmer.github.io/mohamad-masri/"
-                            class="text-blue-200 hover:underline" data-lang-en="Portfolio Website"
+                            class="text-blue-200" data-lang-en="Portfolio Website"
                             data-lang-de="Portfolio-Website">Portfolio Website</a>
                     </li>
                 </ul>
             </section>
+            <section class="mb-4 md:mb-8">
 
-            <section class="md:mb-8">
-                <h2 class="text-xl font-semibold mb-2" data-lang-en="Hobbies" data-lang-de="Hobbys">
+                <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Languages" data-lang-de="Sprachen">
+
+                    Languages
+
+                </h2>
+
+                <ul class="ml-1 text-sm space-y-1">
+
+                    <li data-lang-en="English: Advanced" data-lang-de="Englisch: Fortgeschritten">
+
+                        <span>English</span>
+
+                        <span class="text-yellow-500 ml-2">★★★★☆</span>
+
+                    </li>
+
+                    <li data-lang-en="German: Intermediate" data-lang-de="Deutsch: sehr gute Deutschkenntnisse">
+
+                        <span>German</span>
+
+                        <span class="text-yellow-500 ml-2">★★★☆☆</span>
+
+                    </li>
+
+                    <li data-lang-en="Arabic: Native" data-lang-de="Arabisch: Muttersprache">
+
+                        <span>Arabic</span>
+
+                        <span class="text-yellow-500 ml-2">★★★★★</span>
+
+                    </li>
+
+                </ul>
+
+            </section>
+            <section class="mb-4 md:mb-8">
+                <h2 class="text-xl font-semibold" data-lang-en="Hobbies" data-lang-de="Hobbys">
                     Hobbies
                 </h2>
-                <ul class="list-disc ml-5 text-sm space-y-1">
-                    <li data-lang-en="Fitness" data-lang-de="Fitness">Fitness</li>
-                    <li data-lang-en="Travel" data-lang-de="Reisen">Travel</li>
-                    <li data-lang-en="Gaming" data-lang-de="Gaming">Gaming</li>
-                </ul>
+                <div class="text-sm space-x-2">
+                    <span data-lang-en="Fitness" data-lang-de="Fitness">Fitness,</span>
+                    <span data-lang-en="Travel" data-lang-de="Reisen">Travel,</span>
+                    <span data-lang-en="Gaming" data-lang-de="Gaming">Gaming</span>
+                </div>
             </section>
 
-            <section class="mb-8">
-                <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Languages" data-lang-de="Sprachen">
-                    Languages
-                </h2>
-                <ul class="ml-1 text-sm space-y-2">
-                    <li data-lang-en="English: Advanced" data-lang-de="Englisch: Fortgeschritten">
-                        <span>English</span>
-                        <span class="text-yellow-500 ml-2">★★★★☆</span>
-                    </li>
-                    <li data-lang-en="German: Intermediate" data-lang-de="Deutsch: Mittelstufe">
-                        <span>German</span>
-                        <span class="text-yellow-500 ml-2">★★★☆☆</span>
-                    </li>
-                    <li data-lang-en="Arabic: Native" data-lang-de="Arabisch: Muttersprache">
-                        <span>Arabic</span>
-                        <span class="text-yellow-500 ml-2">★★★★★</span>
-                    </li>
-                </ul>
-            </section>
+
         </div>
-        <p class="text-sm">
-            Masri, derived from the Arabic word for "Egyptian," carries deep
+        <blockquote cite="http://www.masri.blog" class="text-sm">
+            "Masri, derived from the Arabic word for "Egyptian," carries deep
             cultural significance, echoing the grandeur of ancient history. In the
             realm of programming, it can symbolize a fusion of Egypt’s timeless
             wisdom and its enigmatic technological marvels. Ancient does not mean
             primitive—their advancements were so sophisticated that some remain
             unsolved mysteries even today. They were, in many ways, as innovative as
             modern society, leaving behind a legacy that continues to inspire awe
-            and curiosity.
-        </p>
+            and curiosity."
+        </blockquote>
     </div>
-    <button onclick="switchLanguage()" class="no-print px-3 py-1 bg-gray-200 rounded absolute top-2 right-0">
+    <button onclick="switchLanguage()" class="no-print px-3 py-1 bg-gray-200 rounded fixed top-2 right-0">
         <svg id="Google_Translate_24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
@@ -416,7 +438,7 @@
             </g>
         </svg>
     </button>
-    <button onclick="window.print()" class="no-print px-3 py-1 bg-gray-200 rounded absolute top-12 right-0">
+    <button onclick="window.print()" class="no-print px-3 py-1 bg-gray-200 rounded fixed top-12 right-0">
         <svg id="Download_from_the_Cloud_24" width="24" height="24" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
