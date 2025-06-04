@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Primary Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +25,10 @@
     <!-- <meta name="twitter:image" content="https://masri.blog/preview.jpg"> -->
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display+SC&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display+SC&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CDN (for prototyping only) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -45,450 +46,555 @@
 
     <!-- Custom Styles -->
     <style>
-        body {
-            font-family: "Lato", sans-serif;
-            line-height: 1.5;
+      body {
+        font-family: "Lato", sans-serif;
+        line-height: 1.5;
+      }
+
+      li {
+        list-style: circle;
+      }
+
+      .title-font,
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display SC", serif;
+        font-weight: bold;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid black;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media print {
+        .no-print,
+        blockquote {
+          display: none !important;
         }
 
-        li {
-            list-style: circle;
+        .projects {
+          a[href]::after {
+            content: " (" attr(href) ")";
+            font-size: 0.8em;
+            color: #555;
+          }
+
+          a[href] {
+            text-decoration: none !important;
+            color: inherit;
+          }
+
+          a.text-blue-200 {
+            color: #bee3f8;
+          }
         }
-
-        .title-font,
-        h1,
-        h2,
-        h3 {
-            font-family: "Playfair Display SC", serif;
-            font-weight: bold;
-        }
-
-        h1,
-        h2 {
-            border-bottom: 1px solid black;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media print {
-
-            .no-print,
-            blockquote {
-                display: none !important;
-            }
-
-
-            .projects {
-                a[href]::after {
-                    content: " (" attr(href) ")";
-                    font-size: 0.8em;
-                    color: #555;
-                }
-
-                a[href] {
-                    text-decoration: none !important;
-                    color: inherit;
-                }
-
-                a.text-blue-200 {
-                    color: #bee3f8;
-                }
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body id="pdf-content"
-    class="text-stone-900 font-sans leading-relaxed bg-stone-50 dark:bg-stone-800 dark:text-neutral-300 overflow-x-hidden">
-    <div class="max-w-4xl mx-auto p-6 bg-stone-100 shadow-md dark:bg-stone-950 overflow-hidden">
-        <!-- Header -->
-        <header class="border-b pb-6 mb-6">
-            <div class="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-start sm:gap-6 md:gap-10">
-                <img class="h-16 w-16 rounded-full object-cover sm:h-16 sm:w-16" src="./profile.jpg" alt="Avatar" />
-                <div class="grow w-full text-center sm:text-start">
-                    <h3 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h3>
-                    <div
-                        class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-center md:text-start mt-1">
-                        <p>Oldenburg, Germany | <a target="_blank"
-                                href="mailto:masri_mohamad@protonmail.com">masri_mohamad@protonmail.com</a> | <a
-                                target="_blank" href="https://masri.blog">www.masri.blog</a></p>
-                    </div>
-                </div>
+  <body
+    id="pdf-content"
+    class="text-stone-900 font-sans leading-relaxed bg-stone-50 dark:bg-stone-800 dark:text-neutral-300 overflow-x-hidden"
+  >
+    <div
+      class="max-w-4xl mx-auto p-6 bg-stone-100 shadow-md dark:bg-stone-950 overflow-hidden"
+    >
+      <!-- Header -->
+      <header class="border-b pb-6 mb-6">
+        <div
+          class="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-start sm:gap-6 md:gap-10"
+        >
+          <img
+            class="h-16 w-16 rounded-full object-cover sm:h-16 sm:w-16"
+            src="./profile.jpg"
+            alt="Avatar"
+          />
+          <div class="grow w-full text-center sm:text-start">
+            <h3 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h3>
+            <div
+              class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-center md:text-start mt-1"
+            >
+              <p>
+                Oldenburg, Germany |
+                <a target="_blank" href="mailto:masri_mohamad@protonmail.com"
+                  >masri_mohamad@protonmail.com</a
+                >
+                |
+                <a target="_blank" href="https://masri.blog">www.masri.blog</a>
+              </p>
             </div>
-        </header>
+          </div>
+        </div>
+      </header>
 
-        <!-- Work Experience -->
-        <section class="mb-4 md:mb-8">
-            <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Work Experience"
-                data-lang-de="Berufserfahrung">
-                Work Experience
-            </h2>
+      <!-- Work Experience -->
+      <section class="mb-4 md:mb-8">
+        <h2
+          class="text-xl font-semibold mb-2 title-font"
+          data-lang-en="Work Experience"
+          data-lang-de="Berufserfahrung"
+        >
+          Work Experience
+        </h2>
 
-            <div class="mb-6" data-lang-en-h3="Software Developer – Meinders & Elstermann GmbH & Co. KG (Hybrid)"
-                data-lang-de-h3="Softwareentwickler – Meinders & Elstermann GmbH & Co. KG (Hybrid)"
-                data-lang-en-p="Apr 2024 – Present" data-lang-de-p="Apr. 2024 – Heute">
-                <h3 class="font-bold">Software Developer – Meinders & Elstermann GmbH & Co. KG (Hybrid)</h3>
-                <p class="text-sm text-gray-600">Apr 2024 – Present</p>
-                <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Enterprise-Software Development – Built scalable solutions for enterprise clients using Vue.js, Vuex, JavaScript, and Laravel."
-                        data-lang-de="Enterprise-Software-Entwicklung – Erstellung skalierbarer Lösungen für Unternehmenskunden mit Vue.js, Vuex, JavaScript und Laravel.">
-                        Enterprise-Software Development – Built scalable solutions for enterprise clients using Vue.js,
-                        Vuex,
-                        JavaScript, and Laravel.
-                    </li>
-                    <li data-lang-en="Clean Code & Best Practices – Focused on writing maintainable, readable, and efficient code aligned with Clean Code principles."
-                        data-lang-de="Clean Code & Best Practices – Fokus auf das Schreiben von wartbarem, lesbarem und effizientem Code gemäß Clean-Code-Prinzipien.">
-                        Clean Code & Best Practices – Focused on writing maintainable, readable, and efficient code
-                        aligned with
-                        Clean Code principles.
-                    </li>
-                    <li data-lang-en="Test-Driven Development (TDD) – Practiced TDD approach using Jest and Cypress to ensure reliability and robustness."
-                        data-lang-de="Test-Driven Development (TDD) – Anwendung des TDD-Ansatzes mit Jest und Cypress zur Gewährleistung von Zuverlässigkeit und Robustheit.">
-                        Test-Driven Development (TDD) – Practiced TDD approach using Jest and Cypress to ensure
-                        reliability and
-                        robustness.
-                    </li>
-                    <li data-lang-en="Feature Development – Designed and implemented new features, integrating with REST APIs (Laravel, GraphQL, REST APIs)."
-                        data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen, Integration mit REST-APIs (Laravel, GraphQL, REST-APIs).">
-                        Feature Development – Designed and implemented new features, integrating with REST APIs
-                        (Laravel,
-                        GraphQL, REST APIs).
-                    </li>
-                    <li data-lang-en="Version Control & Collaboration – Followed GitFlow for structured development (Git, GitFlow)."
-                        data-lang-de="Versionskontrolle & Zusammenarbeit – Verwendung von GitFlow für strukturierte Entwicklung (Git, GitFlow).">
-                        Version Control & Collaboration – Followed GitFlow for structured development (Git, GitFlow).
-                    </li>
-                    <li data-lang-en="Testing & Debugging – Ensured quality via unit/integration testing (Jest, Cypress, TDD philosophy)."
-                        data-lang-de="Testing & Debugging – Qualitätssicherung durch Unit-/Integrationstests (Jest, Cypress, TDD-Philosophie).">
-                        Testing & Debugging – Ensured quality via unit/integration testing (Jest, Cypress, TDD
-                        philosophy).
-                    </li>
-                    <li data-lang-en="Applied Design Patterns (e.g., Singleton, Factory) to optimize application architecture and enhance scalability."
-                        data-lang-de="Anwendung von Design Patterns (z.B. Singleton, Factory) zur Optimierung der Anwendungsarchitektur und Verbesserung der Skalierbarkeit.">
-                        Applied Design Patterns (e.g., Singleton, Factory) to optimize application architecture and
-                        enhance
-                        scalability.
-                    </li>
-                </ul>
-            </div>
+        <div
+          class="mb-6"
+          data-lang-en-p="Apr 2024 – Present"
+          data-lang-de-p="Apr. 2024 – Heute"
+        >
+          <h3 class="font-bold">
+            <span
+              data-lang-en="Software Developer"
+              data-lang-de="Softwareentwickler"
+              >Software Developer</span
+            >
+            – Meinders & Elstermann GmbH & Co. KG (Hybrid)
+          </h3>
+          <p class="text-sm text-gray-600">Apr 2024 – Present</p>
+          <ul class="list-disc ml-5 mt-2 text-sm">
+            <li
+              data-lang-en="Enterprise-Software Development – Built scalable solutions for enterprise clients using Vue.js, Inertia, JavaScript, and Laravel."
+              data-lang-de="Enterprise-Software-Entwicklung – Erstellung skalierbarer Lösungen für Unternehmenskunden mit Vue.js, Inertia, JavaScript und Laravel."
+            >
+              Developed and implemented scalable enterprise software solutions
+              using Vue.js and Laravel, resulting in a 40% improvement in data
+              processing efficiency for key clients.
+            </li>
+            <li
+              data-lang-en="Clean Code & Best Practices – Focused on writing maintainable, readable, and efficient code aligned with Clean Code principles."
+              data-lang-de="Clean Code & Best Practices – Fokus auf das Schreiben von wartbarem, lesbarem und effizientem Code gemäß Clean-Code-Prinzipien."
+            >
+              Clean Code & Best Practices – Focused on writing maintainable,
+              readable, and efficient code aligned with Clean Code principles.
+            </li>
+            <li
+              data-lang-en="Feature Development – Designed and implemented new features, integrating with Inertia.js (Laravel, GraphQL, Inertia.js)."
+              data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen, Integration mit Inertia.js (Laravel, GraphQL, Inertia.js)."
+            >
+              Feature Development – Designed and implemented new features,
+              integrating with Inertia.js (Laravel, GraphQL, Inertia.js).
+            </li>
+            <li
+              data-lang-en="Version Control & Collaboration for structured development (Git, GitFlow, Lazygit)."
+              data-lang-de="Versionskontrolle & Zusammenarbeit für strukturierte Entwicklung (Git, GitFlow, Lazygit)."
+            >
+              Version Control & Collaboration – Followed GitFlow for structured
+              development (Git, GitFlow, Lazygit).
+            </li>
+            <li
+              data-lang-en="Applied Design Patterns (e.g., Singleton, Factory) to optimize application architecture and enhance scalability."
+              data-lang-de="Anwendung von Design Patterns (z.B. Singleton, Factory) zur Optimierung der Anwendungsarchitektur und Verbesserung der Skalierbarkeit."
+            >
+              Applied Design Patterns (e.g., Singleton, Factory) to optimize
+              application architecture and enhance scalability.
+            </li>
+          </ul>
+        </div>
 
-            <div class="mb-6" data-lang-en-h3="Full Stack Developer – Brainkets (Hybrid)"
-                data-lang-de-h3="Full-Stack-Entwickler – Brainkets (Hybrid)" data-lang-en-p="Oct 2022 – Sep 2023"
-                data-lang-de-p="Okt. 2022 – Sep. 2023">
-                <h3 class="font-bold">Full Stack Developer – Brainkets (Hybrid)</h3>
-                <p class="text-sm text-gray-600">Oct 2022 – Sep 2023</p>
-                <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Frontend Development – Developed interactive UIs and scalable enterprise-web applications using React.js, Next.js, and Redux."
-                        data-lang-de="Frontend-Entwicklung – Entwicklung interaktiver Benutzeroberflächen und skalierbarer Enterprise-Web-Anwendungen mit React.js, Next.js und Redux.">
-                        Frontend Development – Developed interactive UIs and scalable enterprise-web applications using
-                        React.js, Next.js, and Redux.
-                    </li>
-                    <li data-lang-en="Backend Development – Built backend components and REST APIs with Yii2 and PHP, following Clean Code guidelines."
-                        data-lang-de="Backend-Entwicklung – Erstellung von Backend-Komponenten und REST-APIs mit Yii2 und PHP, unter Einhaltung von Clean-Code-Richtlinien.">
-                        Backend Development – Built backend components and REST APIs with Yii2 and PHP, following Clean
-                        Code
-                        guidelines.
-                    </li>
-                    <li data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS, Tailwind CSS, Material UI, and Bootstrap."
-                        data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen mit HTML, CSS, Tailwind CSS, Material UI und Bootstrap.">
-                        UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS,
-                        Tailwind
-                        CSS, Material UI, and Bootstrap.
-                    </li>
-                    <li data-lang-en="API Integration – Connected frontend components to distributed REST-based backend systems (REST APIs, SQL, Postman)."
-                        data-lang-de="API-Integration – Verbindung von Frontend-Komponenten mit verteilten REST-basierten Backend-Systemen (REST-APIs, SQL, Postman).">
-                        API Integration – Connected frontend components to distributed REST-based backend systems (REST
-                        APIs,
-                        SQL, Postman).
-                    </li>
-                    <li data-lang-en="Agile Collaboration – Actively contributed to software development within an Agile team environment (GitHub, Git, SDLC)."
-                        data-lang-de="Agile Zusammenarbeit – Aktiver Beitrag zur Softwareentwicklung in einer agilen Teamumgebung (GitHub, Git, SDLC).">
-                        Agile Collaboration – Actively contributed to software development within an Agile team
-                        environment
-                        (GitHub, Git, SDLC).
-                    </li>
-                    <li data-lang-en="SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization)."
-                        data-lang-de="SEO & Performance-Optimierung – Verbesserung von Geschwindigkeit und Auffindbarkeit (SSR, Meta-Optimierung).">
-                        SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization).
-                    </li>
-                    <li data-lang-en="Utilized common Design Patterns during the development of scalable React and PHP backend systems."
-                        data-lang-de="Verwendung gängiger Design Patterns bei der Entwicklung skalierbarer React- und PHP-Backend-Systeme.">
-                        Utilized common Design Patterns during the development of scalable React and PHP backend
-                        systems.
-                    </li>
-                </ul>
-            </div>
+        <div
+          class="mb-6"
+          data-lang-en-h3="Full Stack Developer – Brainkets (Hybrid)"
+          data-lang-de-h3="Full-Stack-Entwickler – Brainkets (Hybrid)"
+          data-lang-en-p="Oct 2022 – Sep 2023"
+          data-lang-de-p="Okt. 2022 – Sep. 2023"
+        >
+          <h3 class="font-bold">Full Stack Developer – Brainkets (Hybrid)</h3>
+          <p class="text-sm text-gray-600">Oct 2022 – Sep 2023</p>
+          <ul class="list-disc ml-5 mt-2 text-sm">
+            <li
+              data-lang-en="Frontend Development – Developed interactive UIs and scalable enterprise-web applications using React.js, Next.js, and Redux."
+              data-lang-de="Frontend-Entwicklung – Entwicklung interaktiver Benutzeroberflächen und skalierbarer Enterprise-Web-Anwendungen mit React.js, Next.js und Redux."
+            >
+              Frontend Development – Developed interactive UIs and scalable
+              enterprise-web applications using React.js, Next.js, and Redux.
+            </li>
+            <li
+              data-lang-en="Backend Development – Built backend components and REST APIs with Yii2 and PHP, following Clean Code guidelines."
+              data-lang-de="Backend-Entwicklung – Erstellung von Backend-Komponenten und REST-APIs mit Yii2 und PHP, unter Einhaltung von Clean-Code-Richtlinien."
+            >
+              Backend Development – Built backend components and REST APIs with
+              Yii2 and PHP, following Clean Code guidelines.
+            </li>
+            <li
+              data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS, Tailwind CSS, Material UI, and design systems."
+              data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen mit HTML, CSS, Tailwind CSS, Material UI und design systems."
+            >
+              UI/UX Implementation – Translated Figma designs into responsive
+              interfaces using HTML, CSS, Tailwind CSS, Material UI, and
+              design systems.
+            </li>
+            <li
+              data-lang-en="API Integration – Connected frontend components to distributed REST-based backend systems (REST-APIs,JSON, XML, SQL, Postman)."
+              data-lang-de="API-Integration – Verbindung von Frontend-Komponenten mit verteilten REST-basierten Backend-Systemen (REST-APIs,JSON, XML, SQL, Postman)."
+            >
+              API Integration – Connected frontend components to distributed
+              REST-based backend systems (REST APIs, SQL, Postman).
+            </li>
+            <li
+              data-lang-en="Agile Collaboration – Actively contributed to software development within an Agile team environment (GitHub, Git, SDLC)."
+              data-lang-de="Agile Zusammenarbeit – Aktiver Beitrag zur Softwareentwicklung in einer agilen Teamumgebung (GitHub, Git, SDLC)."
+            >
+              Agile Collaboration – Actively contributed to software development
+              within an Agile team environment (GitHub, Git, SDLC).
+            </li>
+            <li
+              data-lang-en="SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization)."
+              data-lang-de="SEO & Performance-Optimierung – Verbesserung von Geschwindigkeit und Auffindbarkeit (SSR, Meta-Optimierung)."
+            >
+              SEO & Performance Optimization – Enhanced speed and
+              discoverability (SSR, Indexing,Analytics, Meta Optimization).
+            </li>
+            <li
+              data-lang-en="Utilized common Design Patterns during the development of scalable React and PHP backend systems."
+              data-lang-de="Verwendung gängiger Design Patterns bei der Entwicklung skalierbarer React- und PHP-Backend-Systeme."
+            >
+              Utilized common Design Patterns during the development of scalable
+              React and PHP backend systems.
+            </li>
+          </ul>
+        </div>
 
-            <div class="mb-6" data-lang-en-h3="Intern – Brainkets (Hybrid)"
-                data-lang-de-h3="Praktikant – Brainkets (Hybrid)" data-lang-en-p="Jul 2022 – Sep 2022"
-                data-lang-de-p="Juli 2022 – Sep. 2022">
-                <h3 class="font-bold">Intern – Brainkets (Hybrid)</h3>
-                <p class="text-sm text-gray-600">Jul 2022 – Sep 2022</p>
-                <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Gained hands-on experience with JavaScript, React.js, HTML, CSS, and Bootstrap, contributing to small enterprise-software modules."
-                        data-lang-de="Praktische Erfahrung mit JavaScript, React.js, HTML, CSS und Bootstrap gesammelt, mit Beiträgen zu kleinen Enterprise-Software-Modulen.">
-                        Gained hands-on experience with JavaScript, React.js, HTML, CSS, and Bootstrap, contributing to
-                        small
-                        enterprise-software modules.
-                    </li>
-                </ul>
-            </div>
+        <div
+          class="mb-6"
+          data-lang-en-h3="Intern – Brainkets (Hybrid)"
+          data-lang-de-h3="Praktikant – Brainkets (Hybrid)"
+          data-lang-en-p="Jul 2022 – Sep 2022"
+          data-lang-de-p="Juli 2022 – Sep. 2022"
+        >
+          <h3 class="font-bold">Intern – Brainkets (Hybrid)</h3>
+          <p class="text-sm text-gray-600">Jul 2022 – Sep 2022</p>
+          <ul class="list-disc ml-5 mt-2 text-sm">
+            <li
+              data-lang-en="Gained hands-on experience with JavaScript, React.js, HTML, CSS, and Bootstrap, contributing to small enterprise-software modules."
+              data-lang-de="Praktische Erfahrung mit JavaScript, React.js, HTML, CSS und Bootstrap gesammelt, mit Beiträgen zu kleinen Enterprise-Software-Modulen."
+            >
+              Gained hands-on experience with JavaScript, React.js, HTML, CSS,
+              and Bootstrap, contributing to small enterprise-software modules.
+            </li>
+          </ul>
+        </div>
 
-            <div data-lang-en-h3="Freelancer & Private Tutor" data-lang-de-h3="Freiberufler & Privatlehrer"
-                data-lang-en-p="May 2020 – Jul 2022" data-lang-de-p="Mai 2020 – Juli 2022">
-                <h3 class="font-bold">Freelancer & Private Tutor</h3>
-                <p class="text-sm text-gray-600">May 2020 – Jul 2022</p>
-                <ul class="list-disc ml-5 mt-2 text-sm">
-                    <li data-lang-en="Project Development – Assisted with software projects (PHP, Java, MySQL, DBMS), occasionally applying design patterns."
-                        data-lang-de="Projektentwicklung – Unterstützung bei Softwareprojekten (PHP, Java, MySQL, DBMS), gelegentliche Anwendung von Design Patterns.">
-                        Project Development – Assisted with software projects (PHP, Java, MySQL, DBMS), occasionally
-                        applying
-                        design patterns.
-                    </li>
-                    <li data-lang-en="Tutoring – Taught Python and programming fundamentals, including Clean Code concepts, to students."
-                        data-lang-de="Nachhilfe – Unterrichtete Python und Programmiergrundlagen, einschließlich Clean-Code-Konzepte, für Studenten.">
-                        Tutoring – Taught Python and programming fundamentals, including Clean Code concepts, to
-                        students.
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div
+          data-lang-en-h3="Freelancer & Private Tutor"
+          data-lang-de-h3="Freiberufler & Privatlehrer"
+          data-lang-en-p="May 2020 – Jul 2022"
+          data-lang-de-p="Mai 2020 – Juli 2022"
+        >
+          <h3 class="font-bold">Freelancer & Private Tutor</h3>
+          <p class="text-sm text-gray-600">May 2020 – Jul 2022</p>
+          <ul class="list-disc ml-5 mt-2 text-sm">
+            <li
+              data-lang-en="Project Development – Assisted with software projects (PHP, Java, MySQL, DBMS), occasionally applying design patterns."
+              data-lang-de="Projektentwicklung – Unterstützung bei Softwareprojekten (PHP, Java, MySQL, DBMS), gelegentliche Anwendung von Design Patterns."
+            >
+              Project Development – Assisted with software projects (PHP, Java,
+              MySQL, DBMS), occasionally applying design patterns.
+            </li>
+            <li
+              data-lang-en="Tutoring – Taught Python and programming fundamentals, including Clean Code concepts, to students."
+              data-lang-de="Nachhilfe – Unterrichtete Python und Programmiergrundlagen, einschließlich Clean-Code-Konzepte, für Studenten."
+            >
+              Tutoring – Taught Python and programming fundamentals, including
+              Clean Code concepts, to students.
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- Skills -->
+      <section class="mb-4 md:mb-8">
+        <h2
+          class="text-xl font-semibold mb-2"
+          data-lang-en="Technical Skills"
+          data-lang-de="Technische Fähigkeiten"
+        >
+          Technical Skills
+        </h2>
+        <div class="text-sm grid gap-1 space-y-2">
+          <div>
+            <h4
+              class="font-semibold"
+              data-lang-en="Frontend"
+              data-lang-de="Frontend"
+            >
+              Frontend
+            </h4>
+            <ul class="list-disc ml-5">
+              <li>
+                React.js (<span data-lang-en="incl" data-lang-de="inkl"
+                  >incl</span
+                >. Redux, Next.js), Vue.js, Angular.js (Vite)
+              </li>
+              <li>JavaScript & TypeScript (ES6+), JSX, HTMX</li>
+              <li>HTML5, CSS3 (Tailwind, SASS, Bootstrap, LESS)</li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-semibold"
+              data-lang-en="Backend & Tools"
+              data-lang-de="Backend & Tools"
+            >
+              Backend & Tools
+            </h4>
+            <ul class="list-disc ml-5">
+              <li>Laravel, PHP (Yii2), Node.js / Express</li>
+              <li>SQL-MYSQL, NoSQL-MongoDB, Postman</li>
+              <li>
+                NPM, Git/GitHub/Gitlab (<span
+                  data-lang-en="incl"
+                  data-lang-de="inkl"
+                  >incl</span
+                >. Gitlab CI)
+              </li>
+              <li>Testing: Jest, Cypress (TDD-oriented testing)</li>
+              <li>
+                Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP)
+                <span
+                  data-lang-en="setup and maintenance"
+                  data-lang-de="Einrichtung und Wartung"
+                >
+                  setup and maintenance</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-semibold"
+              data-lang-en="Other"
+              data-lang-de="Sonstiges"
+            >
+              Other
+            </h4>
+            <ul class="list-disc ml-5">
+              <li>Python, Java, C++, Windows, Linux, MacOS</li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="font-semibold"
+              data-lang-en="Competences"
+              data-lang-de="Kompetenzen"
+            >
+              Competences
+            </h4>
+            <ul class="list-disc ml-5">
+              <li
+                data-lang-en="Teamwork, motivation, flexibility"
+                data-lang-de="Teamfähigkeit, Motivation, Flexibilität"
+              >
+                Teamwork, motivation, flexibility
+              </li>
+              <li
+                data-lang-en="Independent, solution-oriented, responsible work style"
+                data-lang-de="Selbstständige, lösungsorientierte und verantwortungsbewusste Arbeitsweise"
+              >
+                Independent, solution-oriented, verantwortungsbewusst work style
+              </li>
+              <li
+                data-lang-en="IT and process affinity, fast learner, high implementation skills"
+                data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe, hohes Umsetzungsvermögen"
+              >
+                IT and process affinity, fast learner, high implementation
+                skills
+              </li>
+              <li
+                data-lang-en="Strong communication skills"
+                data-lang-de="Kommunikationsstark"
+              >
+                Strong communication skills
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <!-- Skills -->
-        <section class="mb-4 md:mb-8">
-            <h2 class="text-xl font-semibold mb-2" data-lang-en="Technical Skills"
-                data-lang-de="Technische Fähigkeiten">
-                Technical Skills
-            </h2>
-            <div class="text-sm grid gap-1 space-y-2">
-                <div>
-                    <h4 class="font-semibold" data-lang-en="Frontend" data-lang-de="Frontend">Frontend</h4>
-                    <ul class="list-disc ml-5">
-                        <li data-lang-en="React.js (incl. Redux, Next.js), Vue.js, Angular.js (Vite)"
-                            data-lang-de="React.js (inkl. Redux, Next.js), Vue.js, Angular.js (Vite)">
-                            React.js (incl. Redux, Next.js), Vue.js, Angular.js (Vite)
-                        </li>
-                        <li data-lang-en="JavaScript & TypeScript (ES6+), JSX, HTMX"
-                            data-lang-de="JavaScript & TypeScript (ES6+), JSX, HTMX">
-                            JavaScript & TypeScript (ES6+), JSX, HTMX
-                        </li>
-                        <li data-lang-en="HTML5, CSS3 (Tailwind, SASS, LESS)"
-                            data-lang-de="HTML5, CSS3 (Tailwind, SASS, LESS)">
-                            HTML5, CSS3 (Tailwind, SASS, LESS)
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold" data-lang-en="Backend & Tools" data-lang-de="Backend & Tools">Backend &
-                        Tools</h4>
-                    <ul class="list-disc ml-5">
-                        <li data-lang-en="Laravel, PHP (Yii2), Node.js / Express"
-                            data-lang-de="Laravel, PHP (Yii2), Node.js / Express">
-                            Laravel, PHP (Yii2), Node.js / Express
-                        </li>
-                        <li data-lang-en="SQL-MYSQL, NoSQL-MongoDB, Postman"
-                            data-lang-de="SQL-MYSQL, NoSQL-MongoDB, Postman">
-                            SQL-MYSQL, NoSQL-MongoDB, Postman
-                        </li>
-                        <li data-lang-en="NPM, Git/GitHub/Gitlab (incl. Gitlab CI)"
-                            data-lang-de="NPM, Git/GitHub/Gitlab (inkl. Gitlab CI)">
-                            NPM, Git/GitHub/Gitlab (incl. Gitlab CI)
-                        </li>
-                        <li data-lang-en="Testing: Jest, Cypress (TDD-oriented testing)"
-                            data-lang-de="Testing: Jest, Cypress (TDD-orientiertes Testen)">
-                            Testing: Jest, Cypress (TDD-oriented testing)
-                        </li>
-                        <li data-lang-en="Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP) setup and maintenance"
-                            data-lang-de="Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP) Einrichtung und Wartung">
-                            Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP) setup and maintenance
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold" data-lang-en="Other" data-lang-de="Sonstiges">Other</h4>
-                    <ul class="list-disc ml-5">
-                        <li data-lang-en="Python, Java, C++, Windows, Linux, MacOS"
-                            data-lang-de="Python, Java, C++, Windows, Linux, MacOS">
-                            Python, Java, C++, Windows, Linux, MacOS
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold" data-lang-en="Competences" data-lang-de="Kompetenzen">
-                        Competences
-                    </h4>
-                    <ul class="list-disc ml-5">
-                        <li data-lang-en="Teamwork, motivation, flexibility"
-                            data-lang-de="Teamfähigkeit, Motivation, Flexibilität">
-                            Teamwork, motivation, flexibility
-                        </li>
-                        <li data-lang-en="Independent, solution-oriented, verantwortungsbewusst work style"
-                            data-lang-de="Selbstständige, lösungsorientierte und verantwortungsbewusste Arbeitsweise">
-                            Independent, solution-oriented, verantwortungsbewusst work style
-                        </li>
-                        <li data-lang-en="IT and process affinity, fast learner, high implementation skills"
-                            data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe, hohes Umsetzungsvermögen">
-                            IT and process affinity, fast learner, high implementation skills
-                        </li>
-                        <li data-lang-en="Strong communication skills" data-lang-de="Kommunikationsstark">
-                            Strong communication skills
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Education -->
-        <section class="mb-4 md:mb-8">
-            <h2 class="text-xl font-semibold mb-2" data-lang-en="Education" data-lang-de="Ausbildung">
-                Education
-            </h2>
-            <p>
-                <!-- <strong data-lang-en="Lebanese International University, Tyre, Lebanon"
+      <!-- Education -->
+      <section class="mb-4 md:mb-8">
+        <h2
+          class="text-xl font-semibold mb-2"
+          data-lang-en="Education"
+          data-lang-de="Ausbildung"
+        >
+          Education
+        </h2>
+        <p>
+          <!-- <strong data-lang-en="Lebanese International University, Tyre, Lebanon"
                     data-lang-de="Lebanese International University, Tyre, Libanon">Lebanese International University,
                     Tyre, Lebanon</strong> -->
-                <!-- — -->
-                <strong>
-                    <span data-lang-en="Bachelor of Science (B.Sc.) in Computer Science"
-                        data-lang-de="Bachelor of Science (B.Sc.) Informatik">Bachelor of Science (B.Sc.)
-                        Informatik</span>
-                </strong>
-                <span class="text-sm text-gray-600" data-lang-en="- GPA: 3.44 / 4.0" data-lang-de="- Noten: 1.8">
-                    - Noten: 1.8
-                </span>
-            </p>
-            <p class="text-sm mt-2"
-                data-lang-en="Focused on OOP, data structures, algorithm design, problem solving, and complexity analysis."
-                data-lang-de="Fokus auf OOP, Datenstrukturen, Algorithmenentwurf, Problemlösung und Komplexitätsanalyse.">
-                Focused on OOP, data structures, algorithm design, problem solving,
-                and complexity analysis.
-            </p>
-        </section>
+          <!-- — -->
+          <strong>
+            <span
+              >Bachelor of Science (B.Sc.) in Computer Science
+              (Informatik)</span
+            >
+          </strong>
+          <span
+            class="text-sm text-gray-600"
+            data-lang-en="- GPA: 3.44 / 4.0"
+            data-lang-de="- Noten: 1.8"
+          >
+            - Noten: 1.8
+          </span>
+        </p>
+        <p
+          class="text-sm mt-2"
+          data-lang-en="Focused on OOP, data structures, algorithm design, problem solving, and complexity analysis."
+          data-lang-de="Fokus auf OOP, Datenstrukturen, Algorithmenentwurf, Problemlösung und Komplexitätsanalyse."
+        >
+          Focused on OOP, data structures, algorithm design, problem solving,
+          and complexity analysis.
+        </p>
+      </section>
 
-        <!-- Achievements -->
+      <!-- Achievements -->
+      <section class="mb-4 md:mb-8">
+        <h2
+          class="text-xl font-semibold mb-2"
+          data-lang-en="Academic Achievements"
+          data-lang-de="Akademische Leistungen"
+        >
+          Academic Achievements
+        </h2>
+        <ul class="list-disc ml-5 text-sm">
+          <li
+            data-lang-en="Dean’s Honor List – Top students in academic performance"
+            data-lang-de="Dekan's Ehrenliste – Top-Studenten in akademischer Leistung"
+          >
+            Dean’s Honor List – Top students in academic performance
+          </li>
+          <li
+            data-lang-en="Completed various Udemy courses in React, Node, Testing,Laravel, GraphQL, software design patterns"
+            data-lang-de="Absolvierte verschiedene Udemy-Kurse in React, Node, Testing,Laravel, GraphQL, Software-Designmuster"
+          >
+            Completed various Udemy courses in React, Node, Testing (JEST,
+            Cypress), GraphQL, software design patterns, and Laravel
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <div
+        class="projects grid grid-cols-2 gap-5"
+      >
+<section class="mb-4 md:mb-8">
+    <h2 class="text-xl font-semibold mb-2" data-lang-en="Projects" data-lang-de="Projekte">
+        Projects
+    </h2>
+    <p class="text-sm">
+        <span
+            data-lang-en="For a detailed overview of my projects, including descriptions and technologies used, please visit my dedicated projects page:"
+            data-lang-de="Für einen detaillierten Überblick über meine Projekte, einschließlich Beschreibungen und verwendeter Technologien, besuchen Sie bitte meine spezielle Projektseite:">For
+            a detailed overview of my projects, including descriptions and technologies used, please visit my dedicated
+            projects page:</span>
+        <a target="_blank" href="https://masri.blog/Projects" class="text-blue-200 underline hover:text-blue-300"
+            aria-label="View all projects with descriptions (opens in a new tab)">
+            masri.blog/Projects
+        </a>.
+    </p>
+</section>
         <section class="mb-4 md:mb-8">
-            <h2 class="text-xl font-semibold mb-2" data-lang-en="Academic Achievements"
-                data-lang-de="Akademische Leistungen">
-                Academic Achievements
-            </h2>
-            <ul class="list-disc ml-5 text-sm">
-                <li data-lang-en="Dean’s Honor List – Top students in academic performance"
-                    data-lang-de="Dekan's Ehrenliste – Top-Studenten in akademischer Leistung">
-                    Dean’s Honor List – Top students in academic performance
-                </li>
-                <li data-lang-en="Completed various Udemy courses in React, Node, Testing (JEST, Cypress), GraphQL, software design patterns"
-                    data-lang-de="Absolvierte verschiedene Udemy-Kurse in React, Node, Testing (JEST, Cypress), GraphQL, Software-Designmuster">
-                    Completed various Udemy courses in React, Node, Testing (JEST,
-                    Cypress), GraphQL, software design patterns
-                </li>
-            </ul>
+          <h2
+            class="text-xl font-semibold mb-2 title-font"
+            data-lang-en="Languages"
+            data-lang-de="Sprachen"
+          >
+            Languages
+          </h2>
+
+          <ul class="ml-1 text-sm space-y-1">
+            <li
+              data-lang-en="English: Advanced"
+              data-lang-de="Englisch: Fortgeschritten"
+            >
+              <span>English</span>
+            </li>
+
+            <li
+              data-lang-en="German: Intermediate"
+              data-lang-de="Deutsch: sehr gute Deutschkenntnisse"
+            >
+              <span>German</span>
+            </li>
+
+            <li
+              data-lang-en="Arabic: Native"
+              data-lang-de="Arabisch: Muttersprache"
+            >
+              <span>Arabic</span>
+            </li>
+          </ul>
         </section>
-
-        <!-- Projects -->
-        <div class="projects grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1">
-            <section class="mb-4 md:mb-8">
-                <h2 class="text-xl font-semibold mb-2" data-lang-en="Projects" data-lang-de="Projekte">
-                    Projects
-                </h2>
-                <ul class="list-disc ml-5 text-sm space-y-1">
-                    <li>
-                        <a target="_blank" href="https://new.gameacademy.ngo/home" class="text-blue-200"
-                            data-lang-en="Gameacademy - NGO Training & Blog"
-                            data-lang-de="Gameacademy - NGO Training & Blog">Gameacademy - NGO Training & Blog</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://propackstore.org/" class="text-blue-200"
-                            data-lang-en="Propackstore - Sales platform"
-                            data-lang-de="Propackstore - Verkaufsplattform">Propackstore - Sales platform</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="http://ultrastore.me/" class="text-blue-200"
-                            data-lang-en="Timesquare - E-commerce site"
-                            data-lang-de="Timesquare - E-Commerce-Seite">Timesquare - E-commerce site</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="http://www.schooltube.app/" class="text-blue-200"
-                            data-lang-en="Schooltube - E-learning platform"
-                            data-lang-de="Schooltube - E-Learning-Plattform">Schooltube - E-learning platform</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://masri-programmer.github.io/mohamad-masri/"
-                            class="text-blue-200" data-lang-en="Portfolio Website"
-                            data-lang-de="Portfolio-Website">Portfolio Website</a>
-                    </li>
-                </ul>
-            </section>
-            <section class="mb-4 md:mb-8">
-
-                <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Languages" data-lang-de="Sprachen">
-
-                    Languages
-
-                </h2>
-
-                <ul class="ml-1 text-sm space-y-1">
-
-                    <li data-lang-en="English: Advanced" data-lang-de="Englisch: Fortgeschritten">
-
-                        <span>English</span>
-
-                        <span class="text-yellow-500 ml-2">★★★★☆</span>
-
-                    </li>
-
-                    <li data-lang-en="German: Intermediate" data-lang-de="Deutsch: sehr gute Deutschkenntnisse">
-
-                        <span>German</span>
-
-                        <span class="text-yellow-500 ml-2">★★★☆☆</span>
-
-                    </li>
-
-                    <li data-lang-en="Arabic: Native" data-lang-de="Arabisch: Muttersprache">
-
-                        <span>Arabic</span>
-
-                        <span class="text-yellow-500 ml-2">★★★★★</span>
-
-                    </li>
-
-                </ul>
-
-            </section>
-            <section class="mb-4 md:mb-8">
-                <h2 class="text-xl font-semibold" data-lang-en="Hobbies" data-lang-de="Hobbys">
-                    Hobbies
-                </h2>
-                <div class="text-sm space-x-2">
-                    <span data-lang-en="Fitness" data-lang-de="Fitness">Fitness,</span>
-                    <span data-lang-en="Travel" data-lang-de="Reisen">Travel,</span>
-                    <span data-lang-en="Gaming" data-lang-de="Gaming">Gaming</span>
-                </div>
-            </section>
-
-
-        </div>
-        <blockquote cite="http://www.masri.blog" class="text-sm">
-            "Masri, derived from the Arabic word for "Egyptian," carries deep
-            cultural significance, echoing the grandeur of ancient history. In the
-            realm of programming, it can symbolize a fusion of Egypt’s timeless
-            wisdom and its enigmatic technological marvels. Ancient does not mean
-            primitive—their advancements were so sophisticated that some remain
-            unsolved mysteries even today. They were, in many ways, as innovative as
-            modern society, leaving behind a legacy that continues to inspire awe
-            and curiosity."
-        </blockquote>
+        <section class="mb-4 md:mb-8">
+          <h2
+            class="text-xl font-semibold"
+            data-lang-en="Other"
+            data-lang-de="Sonstiges"
+          >
+            Other
+          </h2>
+          <div class="text-sm space-x-2">
+            <li
+              data-lang-en="Willingness to travel (even for several days) on business."
+              data-lang-de="Reisebereitschaft (auch mehrtägig) für geschäftliche Zwecke."
+            >
+              Willingness to travel (even for several days) on business.
+            </li>
+            <li
+              data-lang-en="Actively participate and contribute to working groups and collaborative team environments."
+              data-lang-de="Aktive Teilnahme und Beitrag zu Arbeitsgruppen und kollaborativen Teamumgebungen."
+            >
+              Actively participate and contribute to working groups and
+              collaborative team environments.
+            </li>
+          </div>
+        </section>
+        <section class="mb-4 md:mb-8">
+            <h2 class="text-xl font-semibold" data-lang-en="Hobbies" data-lang-de="Hobbys">
+                Hobbies
+            </h2>
+            <div class="text-sm space-x-2">
+                <li>Fitness,</li>
+                <li>Travel,</li>
+                <li>Gaming</li>
+            </div>
+        </section>
+      </div>
+      <blockquote cite="http://www.masri.blog" class="text-sm">
+        "Masri, derived from the Arabic word for "Egyptian," carries deep
+        cultural significance, echoing the grandeur of ancient history. In the
+        realm of programming, it can symbolize a fusion of Egypt’s timeless
+        wisdom and its enigmatic technological marvels. Ancient does not mean
+        primitive—their advancements were so sophisticated that some remain
+        unsolved mysteries even today. They were, in many ways, as innovative as
+        modern society, leaving behind a legacy that continues to inspire awe
+        and curiosity."
+      </blockquote>
     </div>
-    <button onclick="switchLanguage()" class="no-print px-3 py-1 bg-gray-200 rounded fixed top-2 right-0">
-        <svg id="Google_Translate_24" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
+    <button
+      onclick="switchLanguage()"
+      class="no-print px-3 py-1 bg-gray-200 rounded fixed top-2 right-0"
+    >
+      <svg
+        id="Google_Translate_24"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
 
-            <g transform="matrix(0.45 0 0 0.45 12 12)">
-                <path style="
+        <g transform="matrix(0.45 0 0 0.45 12 12)">
+          <path
+            style="
               stroke: none;
               stroke-width: 1;
               stroke-dasharray: none;
@@ -499,19 +605,31 @@
               fill: rgb(0, 0, 0);
               fill-rule: nonzero;
               opacity: 1;
-            " transform=" translate(-25, -25)"
-                    d="M 6 3 C 4.300781 3 3 4.300781 3 6 L 3 26 C 3 27.699219 4.300781 29 6 29 L 6.40625 29 L 8 27 L 6 27 C 5.398438 27 5 26.601563 5 26 L 5 6 C 5 5.398438 5.398438 5 6 5 L 26 5 C 26.601563 5 27 5.398438 27 6 L 27 21 L 24 21 C 22.300781 21 21 22.300781 21 24 L 21 27 L 16 27 L 17.59375 29 L 21 29 L 21 32.40625 L 23 34.09375 L 23 24 C 23 23.398438 23.398438 23 24 23 L 44 23 C 44.601563 23 45 23.398438 45 24 L 45 44 C 45 44.601563 44.601563 45 44 45 L 24 45 C 23.398438 45 23 44.601563 23 44 L 23 42 L 21 43.6875 L 21 44 C 21 45.699219 22.300781 47 24 47 L 44 47 C 45.699219 47 47 45.699219 47 44 L 47 24 C 47 22.300781 45.699219 21 44 21 L 29 21 L 29 6 C 29 4.300781 27.699219 3 26 3 Z M 16 8 L 16 10 L 8 10 L 8 12 L 19.90625 12 C 19.597656 14.226563 18.292969 16.054688 16.65625 17.53125 C 14.148438 15.332031 12.875 13.03125 12.875 13.03125 L 11.125 13.96875 C 11.125 13.96875 12.433594 16.378906 15.0625 18.78125 C 14.996094 18.828125 14.941406 18.890625 14.875 18.9375 C 12.234375 20.757813 9.59375 21.65625 9.59375 21.65625 L 10.21875 23.5625 C 10.21875 23.5625 13.125 22.597656 16.03125 20.59375 C 16.238281 20.449219 16.449219 20.28125 16.65625 20.125 C 17.796875 20.96875 19.125 21.742188 20.625 22.34375 L 21.375 20.46875 C 20.226563 20.011719 19.199219 19.417969 18.28125 18.78125 C 20.109375 17.050781 21.636719 14.792969 21.9375 12 L 25 12 L 25 10 L 18 10 L 18 8 Z M 12 25 L 7 31 L 10 31 L 10 35 L 14 35 L 14 31 L 17 31 Z M 33 26.40625 L 27.8125 40.1875 L 30.3125 40.1875 L 31.40625 37 L 36.6875 37 L 37.8125 40.1875 L 40.3125 40.1875 L 35.09375 26.40625 Z M 34 29.40625 L 36 35.09375 L 32 35.09375 Z M 19 33 L 19 36 L 10 36 L 14 40 L 19 40 L 19 43 L 25 38 Z"
-                    stroke-linecap="round" />
-            </g>
-        </svg>
+            "
+            transform=" translate(-25, -25)"
+            d="M 6 3 C 4.300781 3 3 4.300781 3 6 L 3 26 C 3 27.699219 4.300781 29 6 29 L 6.40625 29 L 8 27 L 6 27 C 5.398438 27 5 26.601563 5 26 L 5 6 C 5 5.398438 5.398438 5 6 5 L 26 5 C 26.601563 5 27 5.398438 27 6 L 27 21 L 24 21 C 22.300781 21 21 22.300781 21 24 L 21 27 L 16 27 L 17.59375 29 L 21 29 L 21 32.40625 L 23 34.09375 L 23 24 C 23 23.398438 23.398438 23 24 23 L 44 23 C 44.601563 23 45 23.398438 45 24 L 45 44 C 45 44.601563 44.601563 45 44 45 L 24 45 C 23.398438 45 23 44.601563 23 44 L 23 42 L 21 43.6875 L 21 44 C 21 45.699219 22.300781 47 24 47 L 44 47 C 45.699219 47 47 45.699219 47 44 L 47 24 C 47 22.300781 45.699219 21 44 21 L 29 21 L 29 6 C 29 4.300781 27.699219 3 26 3 Z M 16 8 L 16 10 L 8 10 L 8 12 L 19.90625 12 C 19.597656 14.226563 18.292969 16.054688 16.65625 17.53125 C 14.148438 15.332031 12.875 13.03125 12.875 13.03125 L 11.125 13.96875 C 11.125 13.96875 12.433594 16.378906 15.0625 18.78125 C 14.996094 18.828125 14.941406 18.890625 14.875 18.9375 C 12.234375 20.757813 9.59375 21.65625 9.59375 21.65625 L 10.21875 23.5625 C 10.21875 23.5625 13.125 22.597656 16.03125 20.59375 C 16.238281 20.449219 16.449219 20.28125 16.65625 20.125 C 17.796875 20.96875 19.125 21.742188 20.625 22.34375 L 21.375 20.46875 C 20.226563 20.011719 19.199219 19.417969 18.28125 18.78125 C 20.109375 17.050781 21.636719 14.792969 21.9375 12 L 25 12 L 25 10 L 18 10 L 18 8 Z M 12 25 L 7 31 L 10 31 L 10 35 L 14 35 L 14 31 L 17 31 Z M 33 26.40625 L 27.8125 40.1875 L 30.3125 40.1875 L 31.40625 37 L 36.6875 37 L 37.8125 40.1875 L 40.3125 40.1875 L 35.09375 26.40625 Z M 34 29.40625 L 36 35.09375 L 32 35.09375 Z M 19 33 L 19 36 L 10 36 L 14 40 L 19 40 L 19 43 L 25 38 Z"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
     </button>
-    <button onclick="window.print()" class="no-print px-3 py-1 bg-gray-200 rounded fixed top-12 right-0">
-        <svg id="Download_from_the_Cloud_24" width="24" height="24" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
+    <button
+      onclick="window.print()"
+      class="no-print px-3 py-1 bg-gray-200 rounded fixed top-12 right-0"
+    >
+      <svg
+        id="Download_from_the_Cloud_24"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <rect width="24" height="24" stroke="none" fill="#000000" opacity="0" />
 
-            <g transform="matrix(0.4 0 0 0.4 12 12)">
-                <path style="
+        <g transform="matrix(0.4 0 0 0.4 12 12)">
+          <path
+            style="
               stroke: none;
               stroke-width: 1;
               stroke-dasharray: none;
@@ -522,11 +640,13 @@
               fill: rgb(0, 0, 0);
               fill-rule: nonzero;
               opacity: 1;
-            " transform=" translate(-25, -24.5)"
-                    d="M 20 8 C 13.539063 8 8.367188 13.109375 8.09375 19.5 C 3.417969 20.777344 0 24.996094 0 30 C 0 36.046875 4.953125 41 11 41 L 41 41 C 45.945313 41 50 36.945313 50 32 C 50 28.101563 47.402344 24.792969 43.90625 23.625 C 43.695313 17.761719 38.910156 13 33 13 C 31.960938 13 30.992188 13.257813 30.03125 13.53125 C 27.882813 10.261719 24.21875 8 20 8 Z M 20 10 C 23.726563 10 26.992188 12.09375 28.71875 15.09375 L 29.15625 15.8125 L 29.9375 15.53125 C 30.9375 15.167969 31.910156 15 33 15 C 37.953125 15 42 19.046875 42 24 L 42 25.09375 L 42.78125 25.28125 C 45.714844 25.972656 48 28.769531 48 32 C 48 35.855469 44.855469 39 41 39 L 11 39 C 6.046875 39 2 34.953125 2 30 C 2 25.671875 5.058594 21.996094 9.1875 21.1875 L 10 21.03125 L 10 20 C 10 14.433594 14.433594 10 20 10 Z M 24 20 L 24 31.5625 L 19.71875 27.28125 L 18.28125 28.71875 L 24.28125 34.71875 L 25 35.40625 L 25.71875 34.71875 L 31.71875 28.71875 L 30.28125 27.28125 L 26 31.5625 L 26 20 Z"
-                    stroke-linecap="round" />
-            </g>
-        </svg>
+            "
+            transform=" translate(-25, -24.5)"
+            d="M 20 8 C 13.539063 8 8.367188 13.109375 8.09375 19.5 C 3.417969 20.777344 0 24.996094 0 30 C 0 36.046875 4.953125 41 11 41 L 41 41 C 45.945313 41 50 36.945313 50 32 C 50 28.101563 47.402344 24.792969 43.90625 23.625 C 43.695313 17.761719 38.910156 13 33 13 C 31.960938 13 30.992188 13.257813 30.03125 13.53125 C 27.882813 10.261719 24.21875 8 20 8 Z M 20 10 C 23.726563 10 26.992188 12.09375 28.71875 15.09375 L 29.15625 15.8125 L 29.9375 15.53125 C 30.9375 15.167969 31.910156 15 33 15 C 37.953125 15 42 19.046875 42 24 L 42 25.09375 L 42.78125 25.28125 C 45.714844 25.972656 48 28.769531 48 32 C 48 35.855469 44.855469 39 41 39 L 11 39 C 6.046875 39 2 34.953125 2 30 C 2 25.671875 5.058594 21.996094 9.1875 21.1875 L 10 21.03125 L 10 20 C 10 14.433594 14.433594 10 20 10 Z M 24 20 L 24 31.5625 L 19.71875 27.28125 L 18.28125 28.71875 L 24.28125 34.71875 L 25 35.40625 L 25.71875 34.71875 L 31.71875 28.71875 L 30.28125 27.28125 L 26 31.5625 L 26 20 Z"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
     </button>
     <!-- <button id="theme-toggle" onclick="toggleTheme()"
         class="no-print px-3 py-1 bg-gray-200 rounded absolute top-24 right-0 dark:bg-gray-700 dark:text-white">
@@ -540,8 +660,7 @@
                 d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-3-8a1 1 0 00-1-1H5a1 1 0 000 2h1a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 000 2h2a1 1 0 001 1v1a1 1 0 002 0v-1a1 1 0 011-1h2a1 1 0 000-2H9a1 1 0 01-1-1V7a1 1 0 011-1h2a1 1 0 001-1V3a1 1 0 00-1-1z" />
         </svg>
     </button> -->
-</body>
-
+  </body>
 </html>
 <!-- Toggle Theme -->
 <!-- <script>
@@ -582,34 +701,34 @@
 
 <!-- Toggle Language -->
 <script>
-    function switchLanguage() {
-        const languages = ["de", "en"];
-        let currentLang = localStorage.getItem("lang") || "en";
+  function switchLanguage() {
+    const languages = ["de", "en"];
+    let currentLang = localStorage.getItem("lang") || "en";
 
-        // Toggle language
-        const newLang = currentLang === "en" ? "de" : "en";
-        localStorage.setItem("lang", newLang);
+    // Toggle language
+    const newLang = currentLang === "en" ? "de" : "en";
+    localStorage.setItem("lang", newLang);
 
-        applyLanguage(newLang);
-    }
+    applyLanguage(newLang);
+  }
 
-    function applyLanguage(lang) {
-        // Set language on <html> tag
-        document.documentElement.lang = lang;
+  function applyLanguage(lang) {
+    // Set language on <html> tag
+    document.documentElement.lang = lang;
 
-        // Update elements' text
-        const elements = document.querySelectorAll("[data-lang-en]");
-        elements.forEach((el) => {
-            const text = el.getAttribute(`data-lang-${lang}`);
-            if (text) el.textContent = text;
-        });
-    }
-
-    // Apply saved language on load
-    document.addEventListener("DOMContentLoaded", () => {
-        const savedLang = localStorage.getItem("lang") || "en";
-        applyLanguage(savedLang);
+    // Update elements' text
+    const elements = document.querySelectorAll("[data-lang-en]");
+    elements.forEach((el) => {
+      const text = el.getAttribute(`data-lang-${lang}`);
+      if (text) el.textContent = text;
     });
+  }
+
+  // Apply saved language on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "en";
+    applyLanguage(savedLang);
+  });
 </script>
 
 <!-- Footer -->
