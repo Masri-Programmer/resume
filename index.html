@@ -1,661 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Primary Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <meta name="description" content="Mohamad Masri's Resume" />
-    <meta name="author" content="Mohamad Masri" />
-    <title>Mohamad Masri - Resume</title>
-    <link rel="canonical" href="https://masri.blog/" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Mohamad Masri" />
-    <meta property="og:description" content="Short preview text." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://masri.blog" />
-    <!-- <meta property="og:image" content="https://masri.blog/preview.jpg"> -->
+<head>
+  <!-- Primary Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Mohamad Masri's Resume" />
+  <meta name="author" content="Mohamad Masri" />
+  <title>Mohamad Masri - Resume</title>
+  <link rel="canonical" href="https://masri.blog/" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mohamad Masri" />
-    <meta name="twitter:description" content="Preview text for Twitter." />
-    <!-- <meta name="twitter:image" content="https://masri.blog/preview.jpg"> -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Mohamad Masri" />
+  <meta property="og:description" content="Short preview text." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://masri.blog" />
+  <!-- <meta property="og:image" content="https://masri.blog/preview.jpg"> -->
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display+SC&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohamad Masri" />
+  <meta name="twitter:description" content="Preview text for Twitter." />
+  <!-- <meta name="twitter:image" content="https://masri.blog/preview.jpg"> -->
 
-    <!-- Tailwind CDN (for prototyping only) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {},
-        },
-      };
-    </script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display+SC&display=swap" rel="stylesheet" />
 
-    <!-- Structured Data (Schema.org) -->
-    <script type="application/ld+json">
+  <!-- Tailwind CDN (for prototyping only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = {
+      darkMode: "class", theme: { extend: {}, },
+    };</script>
+
+  </style>
+</head>
+
+<body id="pdf-content"
+  class="text-stone-900 font-sans leading-relaxed bg-stone-100 dark:bg-stone-800 dark:text-neutral-300 overflow-x-hidden">
+
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Mohamad Masri",
         "url": "https://masri.blog",
-        "description": "Your page description with keywords"
+        "description": "Mohamad Masri's professional resume showcasing work experience in software development, technical skills in frontend and backend technologies, education, and projects."
       }
     </script>
 
-    <!-- Custom Styles -->
-    <style>
-      body {
-        font-family: "Lato", sans-serif;
-        line-height: 1.5;
-      }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-      li {
-        list-style: circle;
-      }
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./style.css">
 
-      .title-font,
-      h1,
-      h2,
-      h3 {
-        font-family: "Playfair Display SC", serif;
-        font-weight: bold;
-      }
+  <div id="resumeContent" class="max-w-4xl mx-auto p-6 bg-stone-50 shadow-md dark:bg-stone-950 overflow-hidden">
 
-      h1,
-      h2 {
-        border-bottom: 1px solid black;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .print-signature {
-        display: none;
-      }
-
-      @media print {
-        .no-print,
-        blockquote {
-          display: none !important;
-        }
-
-        .print-signature {
-          display: block;
-        }
-
-        .projects {
-          a[href]::after {
-            content: " (" attr(href) ")";
-            font-size: 0.8em;
-            color: #555;
-          }
-
-          a[href] {
-            text-decoration: none !important;
-            color: inherit;
-          }
-
-          a.text-blue-200 {
-            color: #bee3f8;
-          }
-        }
-      }
-    </style>
-  </head>
-
-  <body
-    id="pdf-content"
-    class="text-stone-900 font-sans leading-relaxed bg-stone-50 dark:bg-stone-800 dark:text-neutral-300 overflow-x-hidden"
-  >
-    <div
-      class="max-w-4xl mx-auto p-6 bg-stone-100 shadow-md dark:bg-stone-950 overflow-hidden"
-    >
-      <!-- Header -->
-      <header class="border-b pb-6 mb-6">
-        <div
-          class="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-start sm:gap-6 md:gap-10"
-        >
-          <img
-            class="h-16 w-16 rounded-full object-cover sm:h-16 sm:w-16"
-            src="./profile.jpg"
-            alt="Avatar"
-          />
-          <div class="grow w-full text-center sm:text-start">
-            <h3 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h3>
-            <div
-              class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-center md:text-start mt-1"
-            >
-              <p>
-                Oldenburg, Germany |
-                <a target="_blank" href="mailto:masri_mohamad@protonmail.com"
-                  >masri_mohamad@protonmail.com</a
-                >
-                |
-                <a target="_blank" href="https://masri.blog">www.masri.blog</a>
-              </p>
-            </div>
+    <header id="header" class="border-b pb-6 mb-6"> <!-- Section: Header -->
+      <div class="relative flex flex-col items-center gap-4 sm:flex-row sm:justify-start sm:gap-6 md:gap-10">
+        <img class="h-16 w-16 rounded-full object-cover sm:h-16 sm:w-16" src="./profile.jpg" alt="Avatar" />
+        <div class="grow w-full text-center sm:text-start">
+          <h3 class="text-2xl font-bold md:text-3xl">Mohamad Masri</h3>
+          <div class="flex flex-col items-center sm:flex-row sm:items-baseline w-full text-center md:text-start mt-1">
+            <p>
+              Oldenburg, Germany |
+              <a target="_blank" href="mailto:masri_mohamad@protonmail.com">masri_mohamad@protonmail.com</a>
+              |
+              <a target="_blank" href="https://masri.blog">www.masri.blog</a>
+            </p>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- Work Experience -->
-      <section class="mb-4 md:mb-8">
-        <h2
-          class="text-xl font-semibold mb-2 title-font"
-          data-lang-en="Work Experience"
-          data-lang-de="Berufserfahrung"
-        >
-          Work Experience
-        </h2>
+    <section id="work-experience" class="mb-4 md:mb-8"> <!-- Section: Work Experience -->
+      <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Work Experience" data-lang-de="Berufserfahrung">
+        Work Experience
+      </h2>
 
-        <div
-          class="mb-6"
-          data-lang-en-p="Apr 2024 – Present"
-          data-lang-de-p="Apr. 2024 – Heute"
-        >
-          <h3 class="font-bold">
-            <span
-              data-lang-en="Software Developer"
-              data-lang-de="Softwareentwickler"
-              >Software Developer</span
-            >
-            – Meinders & Elstermann GmbH & Co. KG (Hybrid)
-          </h3>
-          <p class="text-sm text-gray-600">Apr 2024 – Present</p>
-          <ul class="list-disc ml-5 mt-2 text-sm">
-            <li
-              data-lang-en="Enterprise-Software Development – Built scalable solutions for enterprise clients using Vue.js, Inertia, JavaScript, and Laravel."
-              data-lang-de="Enterprise-Software-Entwicklung – Erstellung skalierbarer Lösungen für Unternehmenskunden mit Vue.js, Inertia, JavaScript und Laravel."
-            >
-              Developed and implemented scalable enterprise software solutions
-              using Vue.js and Laravel, resulting in a 40% improvement in data
-              processing efficiency for key clients.
-            </li>
-            <li
-              data-lang-en="Clean Code & Best Practices – Focused on writing maintainable, readable, and efficient code aligned with Clean Code principles."
-              data-lang-de="Clean Code & Best Practices – Fokus auf das Schreiben von wartbarem, lesbarem und effizientem Code gemäß Clean-Code-Prinzipien."
-            >
-              Clean Code & Best Practices – Focused on writing maintainable,
-              readable, and efficient code aligned with Clean Code principles.
-            </li>
-            <li
-              data-lang-en="Feature Development – Designed and implemented new features, integrating with Inertia.js (Laravel, GraphQL, Inertia.js)."
-              data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen, Integration mit Inertia.js (Laravel, GraphQL, Inertia.js)."
-            >
-              Feature Development – Designed and implemented new features,
-              integrating with Inertia.js (Laravel, GraphQL, Inertia.js).
-            </li>
-            <li
-              data-lang-en="Version Control & Collaboration for structured development (Git, GitFlow, Lazygit)."
-              data-lang-de="Versionskontrolle & Zusammenarbeit für strukturierte Entwicklung (Git, GitFlow, Lazygit)."
-            >
-              Version Control & Collaboration – Followed GitFlow for structured
-              development (Git, GitFlow, Lazygit).
-            </li>
-            <li
-              data-lang-en="Applied Design Patterns (e.g., Singleton, Factory) to optimize application architecture and enhance scalability."
-              data-lang-de="Anwendung von Design Patterns (z.B. Singleton, Factory) zur Optimierung der Anwendungsarchitektur und Verbesserung der Skalierbarkeit."
-            >
-              Applied Design Patterns (e.g., Singleton, Factory) to optimize
-              application architecture and enhance scalability.
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="mb-6"
-          data-lang-en-h3="Full Stack Developer – Brainkets (Hybrid)"
-          data-lang-de-h3="Full-Stack-Entwickler – Brainkets (Hybrid)"
-          data-lang-en-p="Oct 2022 – Sep 2023"
-          data-lang-de-p="Okt. 2022 – Sep. 2023"
-        >
-          <h3 class="font-bold">Full Stack Developer – Brainkets (Hybrid)</h3>
-          <p class="text-sm text-gray-600">Oct 2022 – Sep 2023</p>
-          <ul class="list-disc ml-5 mt-2 text-sm">
-            <li
-              data-lang-en="Frontend Development – Developed interactive UIs and scalable enterprise-web applications using React.js, Next.js, and Redux."
-              data-lang-de="Frontend-Entwicklung – Entwicklung interaktiver Benutzeroberflächen und skalierbarer Enterprise-Web-Anwendungen mit React.js, Next.js und Redux."
-            >
-              Frontend Development – Developed interactive UIs and scalable
-              enterprise-web applications using React.js, Next.js, and Redux.
-            </li>
-            <li
-              data-lang-en="Backend Development – Built backend components and REST APIs with Yii2 and PHP, following Clean Code guidelines."
-              data-lang-de="Backend-Entwicklung – Erstellung von Backend-Komponenten und REST-APIs mit Yii2 und PHP, unter Einhaltung von Clean-Code-Richtlinien."
-            >
-              Backend Development – Built backend components and REST APIs with
-              Yii2 and PHP, following Clean Code guidelines.
-            </li>
-            <li
-              data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS, Tailwind CSS, Material UI, and design systems."
-              data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen mit HTML, CSS, Tailwind CSS, Material UI und design systems."
-            >
-              UI/UX Implementation – Translated Figma designs into responsive
-              interfaces using HTML, CSS, Tailwind CSS, Material UI, and design
-              systems.
-            </li>
-            <li
-              data-lang-en="API Integration – Connected frontend components to distributed REST-based backend systems (REST-APIs,JSON, XML, SQL, Postman)."
-              data-lang-de="API-Integration – Verbindung von Frontend-Komponenten mit verteilten REST-basierten Backend-Systemen (REST-APIs,JSON, XML, SQL, Postman)."
-            >
-              API Integration – Connected frontend components to distributed
-              REST-based backend systems (REST APIs, SQL, Postman).
-            </li>
-            <li
-              data-lang-en="Agile Collaboration – Actively contributed to software development within an Agile team environment (GitHub, Git, SDLC)."
-              data-lang-de="Agile Zusammenarbeit – Aktiver Beitrag zur Softwareentwicklung in einer agilen Teamumgebung (GitHub, Git, SDLC)."
-            >
-              Agile Collaboration – Actively contributed to software development
-              within an Agile team environment (GitHub, Git, SDLC).
-            </li>
-            <li
-              data-lang-en="SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization)."
-              data-lang-de="SEO & Performance-Optimierung – Verbesserung von Geschwindigkeit und Auffindbarkeit (SSR, Meta-Optimierung)."
-            >
-              SEO & Performance Optimization – Enhanced speed and
-              discoverability (SSR, Indexing,Analytics, Meta Optimization).
-            </li>
-            <li
-              data-lang-en="Utilized common Design Patterns during the development of scalable React and PHP backend systems."
-              data-lang-de="Verwendung gängiger Design Patterns bei der Entwicklung skalierbarer React- und PHP-Backend-Systeme."
-            >
-              Utilized common Design Patterns during the development of scalable
-              React and PHP backend systems.
-            </li>
-          </ul>
-        </div>
-
-        <div
-          class="mb-6"
-          data-lang-en-h3="Intern – Brainkets (Hybrid)"
-          data-lang-de-h3="Praktikant – Brainkets (Hybrid)"
-          data-lang-en-p="Jul 2022 – Sep 2022"
-          data-lang-de-p="Juli 2022 – Sep. 2022"
-        >
-          <h3 class="font-bold">Intern – Brainkets (Hybrid)</h3>
-          <p class="text-sm text-gray-600">Jul 2022 – Sep 2022</p>
-          <ul class="list-disc ml-5 mt-2 text-sm">
-            <li
-              data-lang-en="Gained hands-on experience with JavaScript, React.js, HTML, CSS, and Bootstrap, contributing to small enterprise-software modules."
-              data-lang-de="Praktische Erfahrung mit JavaScript, React.js, HTML, CSS und Bootstrap gesammelt, mit Beiträgen zu kleinen Enterprise-Software-Modulen."
-            >
-              Gained hands-on experience with JavaScript, React.js, HTML, CSS,
-              and Bootstrap, contributing to small enterprise-software modules.
-            </li>
-          </ul>
-        </div>
-
-        <div
-          data-lang-en-h3="Freelancer & Private Tutor"
-          data-lang-de-h3="Freiberufler & Privatlehrer"
-          data-lang-en-p="May 2020 – Jul 2022"
-          data-lang-de-p="Mai 2020 – Juli 2022"
-        >
-          <h3 class="font-bold">Freelancer & Private Tutor</h3>
-          <p class="text-sm text-gray-600">May 2020 – Jul 2022</p>
-          <ul class="list-disc ml-5 mt-2 text-sm">
-            <li
-              data-lang-en="Project Development – Assisted with software projects (PHP, Java, MySQL, DBMS), occasionally applying design patterns."
-              data-lang-de="Projektentwicklung – Unterstützung bei Softwareprojekten (PHP, Java, MySQL, DBMS), gelegentliche Anwendung von Design Patterns."
-            >
-              Project Development – Assisted with software projects (PHP, Java,
-              MySQL, DBMS), occasionally applying design patterns.
-            </li>
-            <li
-              data-lang-en="Tutoring – Taught Python and programming fundamentals, including Clean Code concepts, to students."
-              data-lang-de="Nachhilfe – Unterrichtete Python und Programmiergrundlagen, einschließlich Clean-Code-Konzepte, für Studenten."
-            >
-              Tutoring – Taught Python and programming fundamentals, including
-              Clean Code concepts, to students.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="mb-4 md:mb-8">
-        <h2
-          class="text-xl font-semibold mb-2"
-          data-lang-en="Technical Skills"
-          data-lang-de="Technische Fähigkeiten"
-        >
-          Technical Skills
-        </h2>
-        <div class="text-sm grid gap-1 space-y-2">
-          <div>
-            <h4
-              class="font-semibold"
-              data-lang-en="Frontend"
-              data-lang-de="Frontend"
-            >
-              Frontend
-            </h4>
-            <ul class="list-disc ml-5">
-              <li>
-                React.js (<span data-lang-en="incl" data-lang-de="inkl"
-                  >incl</span
-                >. Redux, Next.js), Vue.js, Angular.js (Vite)
-              </li>
-              <li>JavaScript & TypeScript (ES6+), JSX, HTMX</li>
-              <li>HTML5, CSS3 (Tailwind, SASS, Bootstrap, LESS)</li>
-            </ul>
-          </div>
-          <div>
-            <h4
-              class="font-semibold"
-              data-lang-en="Backend & Tools"
-              data-lang-de="Backend & Tools"
-            >
-              Backend & Tools
-            </h4>
-            <ul class="list-disc ml-5">
-              <li>Laravel, PHP (Yii2), Node.js / Express</li>
-              <li>SQL-MYSQL, NoSQL-MongoDB, Postman</li>
-              <li>
-                NPM, Git/GitHub/Gitlab (<span
-                  data-lang-en="incl"
-                  data-lang-de="inkl"
-                  >incl</span
-                >. Gitlab CI)
-              </li>
-              <li>Testing: Jest, Cypress (TDD-oriented testing)</li>
-              <li>
-                Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP)
-                <span
-                  data-lang-en="setup and maintenance"
-                  data-lang-de="Einrichtung und Wartung"
-                >
-                  setup and maintenance</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4
-              class="font-semibold"
-              data-lang-en="Other"
-              data-lang-de="Sonstiges"
-            >
-              Other
-            </h4>
-            <ul class="list-disc ml-5">
-              <li>Python, Java, C++, Windows, Linux, MacOS</li>
-            </ul>
-          </div>
-          <div>
-            <h4
-              class="font-semibold"
-              data-lang-en="Competences"
-              data-lang-de="Kompetenzen"
-            >
-              Competences
-            </h4>
-            <ul class="list-disc ml-5">
-              <li
-                data-lang-en="Teamwork, motivation, flexibility"
-                data-lang-de="Teamfähigkeit, Motivation, Flexibilität"
-              >
-                Teamwork, motivation, flexibility
-              </li>
-              <li
-                data-lang-en="Independent, solution-oriented, responsible work style"
-                data-lang-de="Selbstständige, lösungsorientierte und verantwortungsbewusste Arbeitsweise"
-              >
-                Independent, solution-oriented, verantwortungsbewusst work style
-              </li>
-              <li
-                data-lang-en="IT and process affinity, fast learner, high implementation skills"
-                data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe, hohes Umsetzungsvermögen"
-              >
-                IT and process affinity, fast learner, high implementation
-                skills
-              </li>
-              <li
-                data-lang-en="Strong communication skills"
-                data-lang-de="Kommunikationsstark"
-              >
-                Strong communication skills
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section class="mb-4 md:mb-8">
-        <h2
-          class="text-xl font-semibold mb-2"
-          data-lang-en="Education"
-          data-lang-de="Ausbildung"
-        >
-          Education
-        </h2>
-        <p>
-          <!-- <strong data-lang-en="Lebanese International University, Tyre, Lebanon"
-                    data-lang-de="Lebanese International University, Tyre, Libanon">Lebanese International University,
-                    Tyre, Lebanon</strong> -->
-          <!-- — -->
-          <strong>
-            <span
-              >Bachelor of Science (B.Sc.) in Computer Science
-              (Informatik)</span
-            >
-          </strong>
-          <span
-            class="text-sm text-gray-600"
-            data-lang-en="- GPA: 3.44 / 4.0"
-            data-lang-de="- Noten: 1.8"
-          >
-            - Noten: 1.8
-          </span>
-        </p>
-        <p
-          class="text-sm mt-2"
-          data-lang-en="Focused on OOP, data structures, algorithm design, problem solving, and complexity analysis."
-          data-lang-de="Fokus auf OOP, Datenstrukturen, Algorithmenentwurf, Problemlösung und Komplexitätsanalyse."
-        >
-          Focused on OOP, data structures, algorithm design, problem solving,
-          and complexity analysis.
-        </p>
-      </section>
-
-      <!-- Achievements -->
-      <section class="mb-4 md:mb-8">
-        <h2
-          class="text-xl font-semibold mb-2"
-          data-lang-en="Academic Achievements"
-          data-lang-de="Akademische Leistungen"
-        >
-          Academic Achievements
-        </h2>
-        <ul class="list-disc ml-5 text-sm">
+      <div class="mb-6" data-lang-en-p="Apr 2024 – Present" data-lang-de-p="Apr. 2024 – Heute">
+        <h3 class="font-bold">
+          <span data-lang-en="Software Developer" data-lang-de="Softwareentwickler">Software Developer</span>
+          – Meinders & Elstermann GmbH & Co. KG (Hybrid)
+        </h3>
+        <p class="text-sm text-gray-600">Apr 2024 – Present</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
           <li
-            data-lang-en="Dean’s Honor List – Top students in academic performance"
-            data-lang-de="Dekan's Ehrenliste – Top-Studenten in akademischer Leistung"
-          >
-            Dean’s Honor List – Top students in academic performance
+            data-lang-en="Enterprise-Software Development – Built scalable solutions for enterprise clients using Vue.js, Inertia, JavaScript, and Laravel."
+            data-lang-de="Enterprise-Software-Entwicklung – Erstellung skalierbarer Lösungen für Unternehmenskunden mit Vue.js, Inertia, JavaScript und Laravel.">
+            Developed and implemented scalable enterprise software solutions
+            using Vue.js and Laravel, resulting in a 40% improvement in data
+            processing efficiency for key clients.
           </li>
           <li
-            data-lang-en="Completed various Udemy courses in React, Node, Testing,Laravel, GraphQL, software design patterns"
-            data-lang-de="Absolvierte verschiedene Udemy-Kurse in React, Node, Testing,Laravel, GraphQL, Software-Designmuster"
-          >
-            Completed various Udemy courses in React, Node, Testing (JEST,
-            Cypress), GraphQL, software design patterns, and Laravel
+            data-lang-en="Clean Code & Best Practices – Focused on writing maintainable, readable, and efficient code aligned with Clean Code principles."
+            data-lang-de="Clean Code & Best Practices – Fokus auf das Schreiben von wartbarem, lesbarem und effizientem Code gemäß Clean-Code-Prinzipien.">
+            Clean Code & Best Practices – Focused on writing maintainable,
+            readable, and efficient code aligned with Clean Code principles.
+          </li>
+          <li
+            data-lang-en="Feature Development – Designed and implemented new features, integrating with Inertia.js (Laravel, GraphQL, Inertia.js)."
+            data-lang-de="Feature-Entwicklung – Design und Implementierung neuer Funktionen, Integration mit Inertia.js (Laravel, GraphQL, Inertia.js).">
+            Feature Development – Designed and implemented new features,
+            integrating with Inertia.js (Laravel, GraphQL, Inertia.js).
+          </li>
+          <li data-lang-en="Version Control & Collaboration for structured development (Git, GitFlow, Lazygit)."
+            data-lang-de="Versionskontrolle & Zusammenarbeit für strukturierte Entwicklung (Git, GitFlow, Lazygit).">
+            Version Control & Collaboration – Followed GitFlow for structured
+            development (Git, GitFlow, Lazygit).
+          </li>
+          <li
+            data-lang-en="Applied Design Patterns (e.g., Singleton, Factory) to optimize application architecture and enhance scalability."
+            data-lang-de="Anwendung von Design Patterns (z.B. Singleton, Factory) zur Optimierung der Anwendungsarchitektur und Verbesserung der Skalierbarkeit.">
+            Applied Design Patterns (e.g., Singleton, Factory) to optimize
+            application architecture and enhance scalability.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6" data-lang-en-h3="Full Stack Developer – Brainkets (Hybrid)"
+        data-lang-de-h3="Full-Stack-Entwickler – Brainkets (Hybrid)" data-lang-en-p="Oct 2022 – Sep 2023"
+        data-lang-de-p="Okt. 2022 – Sep. 2023">
+        <h3 class="font-bold">Full Stack Developer – Brainkets (Hybrid)</h3>
+        <p class="text-sm text-gray-600">Oct 2022 – Sep 2023</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li
+            data-lang-en="Frontend Development – Developed interactive UIs and scalable enterprise-web applications using React.js, Next.js, and Redux."
+            data-lang-de="Frontend-Entwicklung – Entwicklung interaktiver Benutzeroberflächen und skalierbarer Enterprise-Web-Anwendungen mit React.js, Next.js und Redux.">
+            Frontend Development – Developed interactive UIs and scalable
+            enterprise-web applications using React.js, Next.js, and Redux.
+          </li>
+          <li
+            data-lang-en="Backend Development – Built backend components and REST APIs with Yii2 and PHP, following Clean Code guidelines."
+            data-lang-de="Backend-Entwicklung – Erstellung von Backend-Komponenten und REST-APIs mit Yii2 und PHP, unter Einhaltung von Clean-Code-Richtlinien.">
+            Backend Development – Built backend components and REST APIs with
+            Yii2 and PHP, following Clean Code guidelines.
+          </li>
+          <li
+            data-lang-en="UI/UX Implementation – Translated Figma designs into responsive interfaces using HTML, CSS, Tailwind CSS, Material UI, and design systems."
+            data-lang-de="UI/UX-Implementierung – Umsetzung von Figma-Designs in responsive Oberflächen mit HTML, CSS, Tailwind CSS, Material UI und design systems.">
+            UI/UX Implementation – Translated Figma designs into responsive
+            interfaces using HTML, CSS, Tailwind CSS, Material UI, and design
+            systems.
+          </li>
+          <li
+            data-lang-en="API Integration – Connected frontend components to distributed REST-based backend systems (REST-APIs,JSON, XML, SQL, Postman)."
+            data-lang-de="API-Integration – Verbindung von Frontend-Komponenten mit verteilten REST-basierten Backend-Systemen (REST-APIs,JSON, XML, SQL, Postman).">
+            API Integration – Connected frontend components to distributed
+            REST-based backend systems (REST APIs, SQL, Postman).
+          </li>
+          <li
+            data-lang-en="Agile Collaboration – Actively contributed to software development within an Agile team environment (GitHub, Git, SDLC)."
+            data-lang-de="Agile Zusammenarbeit – Aktiver Beitrag zur Softwareentwicklung in einer agilen Teamumgebung (GitHub, Git, SDLC).">
+            Agile Collaboration – Actively contributed to software development
+            within an Agile team environment (GitHub, Git, SDLC).
+          </li>
+          <li
+            data-lang-en="SEO & Performance Optimization – Enhanced speed and discoverability (SSR, Meta Optimization)."
+            data-lang-de="SEO & Performance-Optimierung – Verbesserung von Geschwindigkeit und Auffindbarkeit (SSR, Meta-Optimierung).">
+            SEO & Performance Optimization – Enhanced speed and
+            discoverability (SSR, Indexing,Analytics, Meta Optimization).
+          </li>
+          <li
+            data-lang-en="Utilized common Design Patterns during the development of scalable React and PHP backend systems."
+            data-lang-de="Verwendung gängiger Design Patterns bei der Entwicklung skalierbarer React- und PHP-Backend-Systeme.">
+            Utilized common Design Patterns during the development of scalable
+            React and PHP backend systems.
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6" data-lang-en-h3="Intern – Brainkets (Hybrid)" data-lang-de-h3="Praktikant – Brainkets (Hybrid)"
+        data-lang-en-p="Jul 2022 – Sep 2022" data-lang-de-p="Juli 2022 – Sep. 2022">
+        <h3 class="font-bold">Intern – Brainkets (Hybrid)</h3>
+        <p class="text-sm text-gray-600">Jul 2022 – Sep 2022</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li
+            data-lang-en="Gained hands-on experience with JavaScript, React.js, HTML, CSS, and Bootstrap, contributing to small enterprise-software modules."
+            data-lang-de="Praktische Erfahrung mit JavaScript, React.js, HTML, CSS und Bootstrap gesammelt, mit Beiträgen zu kleinen Enterprise-Software-Modulen.">
+            Gained hands-on experience with JavaScript, React.js, HTML, CSS,
+            and Bootstrap, contributing to small enterprise-software modules.
+          </li>
+        </ul>
+      </div>
+
+      <div data-lang-en-h3="Freelancer & Private Tutor" data-lang-de-h3="Freiberufler & Privatlehrer"
+        data-lang-en-p="May 2020 – Jul 2022" data-lang-de-p="Mai 2020 – Juli 2022">
+        <h3 class="font-bold">Freelancer & Private Tutor</h3>
+        <p class="text-sm text-gray-600">May 2020 – Jul 2022</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li
+            data-lang-en="Project Development – Assisted with software projects (PHP, Java, MySQL, DBMS), occasionally applying design patterns."
+            data-lang-de="Projektentwicklung – Unterstützung bei Softwareprojekten (PHP, Java, MySQL, DBMS), gelegentliche Anwendung von Design Patterns.">
+            Project Development – Assisted with software projects (PHP, Java,
+            MySQL, DBMS), occasionally applying design patterns.
+          </li>
+          <li
+            data-lang-en="Tutoring – Taught Python and programming fundamentals, including Clean Code concepts, to students."
+            data-lang-de="Nachhilfe – Unterrichtete Python und Programmiergrundlagen, einschließlich Clean-Code-Konzepte, für Studenten.">
+            Tutoring – Taught Python and programming fundamentals, including
+            Clean Code concepts, to students.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="technical-skills" class="mb-4 md:mb-8"> <!-- Section: Technical Skills -->
+      <h2 class="text-xl font-semibold mb-2" data-lang-en="Technical Skills" data-lang-de="Technische Fähigkeiten">
+        Technical Skills
+      </h2>
+      <div class="text-sm grid gap-1 space-y-2">
+        <div>
+          <h4 class="font-semibold" data-lang-en="Frontend" data-lang-de="Frontend">
+            Frontend
+          </h4>
+          <ul class="list-disc ml-5">
+            <li>
+              React.js (<span data-lang-en="incl" data-lang-de="inkl">incl</span>. Redux, Next.js), Vue.js, Angular.js
+              (Vite)
+            </li>
+            <li>JavaScript & TypeScript (ES6+), JSX, HTMX</li>
+            <li>HTML5, CSS3 (Tailwind, SASS, Bootstrap, LESS)</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold" data-lang-en="Backend & Tools" data-lang-de="Backend & Tools">
+            Backend & Tools
+          </h4>
+          <ul class="list-disc ml-5">
+            <li>Laravel, PHP (Yii2), Node.js / Express</li>
+            <li>SQL-MYSQL, NoSQL-MongoDB, Postman</li>
+            <li>
+              NPM, Git/GitHub/Gitlab (<span data-lang-en="incl" data-lang-de="inkl">incl</span>. Gitlab CI)
+            </li>
+            <li>Testing: Jest, Cypress (TDD-oriented testing)</li>
+            <li>
+              Linux-Dev-Stack: LAMP (Linux, Apache, MySQL, PHP)
+              <span data-lang-en="setup and maintenance" data-lang-de="Einrichtung und Wartung">
+                setup and maintenance</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold" data-lang-en="Other" data-lang-de="Sonstiges">
+            Other
+          </h4>
+          <ul class="list-disc ml-5">
+            <li>Python, Java, C++, Windows, Linux, MacOS</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold" data-lang-en="Competences" data-lang-de="Kompetenzen">
+            Competences
+          </h4>
+          <ul class="list-disc ml-5">
+            <li data-lang-en="Teamwork, motivation, flexibility" data-lang-de="Teamfähigkeit, Motivation, Flexibilität">
+              Teamwork, motivation, flexibility
+            </li>
+            <li data-lang-en="Independent, solution-oriented, responsible work style"
+              data-lang-de="Selbstständige, lösungsorientierte und verantwortungsbewusste Arbeitsweise">
+              Independent, solution-oriented, verantwortungsbewusst work style
+            </li>
+            <li data-lang-en="IT and process affinity, fast learner, high implementation skills"
+              data-lang-de="IT- und Prozessaffinität, schnelle Auffassungsgabe, hohes Umsetzungsvermögen">
+              IT and process affinity, fast learner, high implementation
+              skills
+            </li>
+            <li data-lang-en="Strong communication skills" data-lang-de="Kommunikationsstark">
+              Strong communication skills
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="mb-4 md:mb-8"> <!-- Section: Education -->
+      <h2 class="text-xl font-semibold mb-2" data-lang-en="Education" data-lang-de="Ausbildung">
+        Education
+      </h2>
+      <p>
+        <!-- <strong data-lang-en="Lebanese International University, Tyre, Lebanon"
+                    data-lang-de="Lebanese International University, Tyre, Libanon">Lebanese International University,
+                    Tyre, Lebanon</strong> -->
+        <!-- — -->
+        <strong>
+          <span>Bachelor of Science (B.Sc.) in Computer Science
+            (Informatik)</span>
+        </strong>
+        <span class="text-sm text-gray-600" data-lang-en="- GPA: 3.44 / 4.0" data-lang-de="- Noten: 1.8">
+          - Noten: 1.8
+        </span>
+      </p>
+      <p class="text-sm mt-2"
+        data-lang-en="Focused on OOP, data structures, algorithm design, problem solving, and complexity analysis."
+        data-lang-de="Fokus auf OOP, Datenstrukturen, Algorithmenentwurf, Problemlösung und Komplexitätsanalyse.">
+        Focused on OOP, data structures, algorithm design, problem solving,
+        and complexity analysis.
+      </p>
+    </section>
+
+    <section id="academic-achievements" class="mb-4 md:mb-8"> <!-- Section: Academic Achievements -->
+      <h2 class="text-xl font-semibold mb-2" data-lang-en="Academic Achievements" data-lang-de="Akademische Leistungen">
+        Academic Achievements
+      </h2>
+      <ul class="list-disc ml-5 text-sm">
+        <li data-lang-en="Dean’s Honor List – Top students in academic performance"
+          data-lang-de="Dekan's Ehrenliste – Top-Studenten in akademischer Leistung">
+          Dean’s Honor List – Top students in academic performance
+        </li>
+        <li
+          data-lang-en="Completed various Udemy courses in React, Node, Testing,Laravel, GraphQL, software design patterns"
+          data-lang-de="Absolvierte verschiedene Udemy-Kurse in React, Node, Testing,Laravel, GraphQL, Software-Designmuster">
+          Completed various Udemy courses in React, Node, Testing (JEST,
+          Cypress), GraphQL, software design patterns, and Laravel
+        </li>
+      </ul>
+    </section>
+
+    <div class="projects grid grid-cols-2 gap-5"> <!-- Section: Projects -->
+      <section id="projects" class="mb-4 md:mb-8"> <!-- Section: Projects -->
+        <h2 class="text-xl font-semibold mb-2" data-lang-en="Projects" data-lang-de="Projekte">
+          Projects
+        </h2>
+        <p class="text-sm">
+          <span
+            data-lang-en="For a detailed overview of my projects, including descriptions and technologies used, please visit my dedicated projects page:"
+            data-lang-de="Für einen detaillierten Überblick über meine Projekte, einschließlich Beschreibungen und verwendeter Technologien, besuchen Sie bitte meine spezielle Projektseite:">For
+            a detailed overview of my projects, including descriptions
+            and technologies used, please visit my dedicated projects
+            page:</span>
+          <a target="_blank" href="https://masri.blog/Projects/Main" class="text-blue-200 underline hover:text-blue-300"
+            aria-label="View all projects with descriptions (opens in a new tab)">
+            masri.blog/Projects.</a>
+        </p>
+      </section>
+      <section id="languages" class="mb-4 md:mb-8"> <!-- Section: Languages -->
+        <h2 class="text-xl font-semibold mb-2 title-font" data-lang-en="Languages" data-lang-de="Sprachen">
+          Languages
+        </h2>
+
+        <ul class="ml-1 text-sm space-y-1">
+          <li data-lang-en="English: Advanced" data-lang-de="Englisch: Fortgeschritten">
+            <span>English</span>
+          </li>
+
+          <li data-lang-en="German: Intermediate" data-lang-de="Deutsch: sehr gute Deutschkenntnisse">
+            <span>German</span>
+          </li>
+
+          <li data-lang-en="Arabic: Native" data-lang-de="Arabisch: Muttersprache">
+            <span>Arabic</span>
           </li>
         </ul>
       </section>
-
-      <!-- Projects -->
-      <div class="projects grid grid-cols-2 gap-5">
-        <section class="mb-4 md:mb-8">
-          <h2
-            class="text-xl font-semibold mb-2"
-            data-lang-en="Projects"
-            data-lang-de="Projekte"
-          >
-            Projects
-          </h2>
-          <p class="text-sm">
-            <span
-              data-lang-en="For a detailed overview of my projects, including descriptions and technologies used, please visit my dedicated projects page:"
-              data-lang-de="Für einen detaillierten Überblick über meine Projekte, einschließlich Beschreibungen und verwendeter Technologien, besuchen Sie bitte meine spezielle Projektseite:"
-              >For a detailed overview of my projects, including descriptions
-              and technologies used, please visit my dedicated projects
-              page:</span
-            >
-            <a
-              target="_blank"
-              href="https://masri.blog/Projects/Main"
-              class="text-blue-200 underline hover:text-blue-300"
-              aria-label="View all projects with descriptions (opens in a new tab)"
-            >
-              masri.blog/Projects.</a
-            >
-          </p>
-        </section>
-        <section class="mb-4 md:mb-8">
-          <h2
-            class="text-xl font-semibold mb-2 title-font"
-            data-lang-en="Languages"
-            data-lang-de="Sprachen"
-          >
-            Languages
-          </h2>
-
-          <ul class="ml-1 text-sm space-y-1">
-            <li
-              data-lang-en="English: Advanced"
-              data-lang-de="Englisch: Fortgeschritten"
-            >
-              <span>English</span>
-            </li>
-
-            <li
-              data-lang-en="German: Intermediate"
-              data-lang-de="Deutsch: sehr gute Deutschkenntnisse"
-            >
-              <span>German</span>
-            </li>
-
-            <li
-              data-lang-en="Arabic: Native"
-              data-lang-de="Arabisch: Muttersprache"
-            >
-              <span>Arabic</span>
-            </li>
-          </ul>
-        </section>
-        <section class="mb-4 md:mb-8">
-          <h2
-            class="text-xl font-semibold"
-            data-lang-en="Other"
-            data-lang-de="Sonstiges"
-          >
-            Other
-          </h2>
-          <div class="text-sm space-x-2">
-            <li
-              data-lang-en="Willingness to travel (even for several days) on business."
-              data-lang-de="Reisebereitschaft (auch mehrtägig) für geschäftliche Zwecke."
-            >
-              Willingness to travel (even for several days) on business.
-            </li>
-            <li
-              data-lang-en="Actively participate and contribute to working groups and collaborative team environments."
-              data-lang-de="Aktive Teilnahme und Beitrag zu Arbeitsgruppen und kollaborativen Teamumgebungen."
-            >
-              Actively participate and contribute to working groups and
-              collaborative team environments.
-            </li>
-          </div>
-        </section>
-        <section class="mb-4 md:mb-8">
-          <h2
-            class="text-xl font-semibold"
-            data-lang-en="Hobbies"
-            data-lang-de="Hobbys"
-          >
-            Hobbies
-          </h2>
-          <div class="text-sm space-x-2">
-            <li>Fitness,</li>
-            <li>Travel,</li>
-            <li>Gaming</li>
-          </div>
-        </section>
-      </div>
-      <blockquote cite="http://www.masri.blog" class="text-sm">
-        "Masri, derived from the Arabic word for "Egyptian," carries deep
-        cultural significance, echoing the grandeur of ancient history. In the
-        realm of programming, it can symbolize a fusion of Egypt’s timeless
-        wisdom and its enigmatic technological marvels. Ancient does not mean
-        primitive—their advancements were so sophisticated that some remain
-        unsolved mysteries even today. They were, in many ways, as innovative as
-        wisdom and its enigmatic technological marvels. Ancient does not mean
-        primitive—their advancements were so sophisticated that some remain
-        unsolved mysteries even today. They were, in many ways, as innovative as
-        modern society, leaving behind a legacy that continues to inspire awe
-        and curiosity."
-      </blockquote>
+      <section id="other-info" class="mb-4 md:mb-8"> <!-- Section: Other Information -->
+        <h2 class="text-xl font-semibold" data-lang-en="Other" data-lang-de="Sonstiges">
+          Other
+        </h2>
+        <div class="text-sm">
+          <li data-lang-en="Willingness to travel (even for several days) on business."
+            data-lang-de="Reisebereitschaft (auch mehrtägig) für geschäftliche Zwecke.">
+            Willingness to travel (even for several days) on business.
+          </li>
+          <li data-lang-en="Actively participate and contribute to working groups and collaborative team environments."
+            data-lang-de="Aktive Teilnahme und Beitrag zu Arbeitsgruppen und kollaborativen Teamumgebungen.">
+            Actively participate and contribute to working groups and
+            collaborative team environments.
+          </li>
+        </div>
+      </section>
+      <section id="hobbies" class="mb-4 md:mb-8"> <!-- Section: Hobbies -->
+        <h2 class="text-xl font-semibold" data-lang-en="Hobbies" data-lang-de="Hobbys">
+          Hobbies
+        </h2>
+        <div class="text-sm">
+          <li>Fitness,</li>
+          <li>Travel,</li>
+          <li>Gaming</li>
+        </div>
+      </section>
     </div>
-    <!-- Footer -->
-    <footer
-      class="text-center text-xs text-gray-500 mt-10 fixed bottom-0 right-0 px-2 pt-2 text-xs text-gray-600 z-[9999]"
-    >
-      <!-- <p>Mohamad Masri, Oldenburg – 28.01.2024</p> -->
-      <!-- <p>Mohamad Masri, Oldenburg – 26.04.2025</p> -->
-      <div class="print-signature"><a href="https://resume.masri.blog" target="_blank" rel="noopener noreferrer">https://resume.masri.blog</a></div>
-    </footer>
-    <div class="fixed top-4 right-4 flex flex-col space-y-3 no-print">
-      <button
-        onClick="switchLanguage()"
-        class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
-        aria-label="Switch Language"
-      >
-        <i
-          data-lucide="languages"
-          class="w-5 h-5 text-gray-700 dark:text-gray-400"
-        ></i>
-      </button>
 
-      <button
-        onClick="window.print()"
-        class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
-        aria-label="Print or Download Page"
-      >
-        <i
-          data-lucide="Download"
-          class="w-5 h-5 text-gray-700 dark:text-gray-400"
-        ></i>
-      </button>
+    <blockquote cite="http://www.masri.blog" class="text-sm"> <!-- Blockquote -->
+      "Masri, derived from the Arabic word for "Egyptian," carries deep
+      cultural significance, echoing the grandeur of ancient history. In the
+      realm of programming, it can symbolize a fusion of Egypt’s timeless
+      wisdom and its enigmatic technological marvels. Ancient does not mean
+      primitive—their advancements were so sophisticated that some remain
+      unsolved mysteries even today. They were, in many ways, as innovative as
+      wisdom and its enigmatic technological marvels. Ancient does not mean
+      primitive—their advancements were so sophisticated that some remain
+      unsolved mysteries even today. They were, in many ways, as innovative as
+      modern society, leaving behind a legacy that continues to inspire awe
+      and curiosity."
+    </blockquote>
 
-      <button
-        id="theme-toggle"
-        class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
-        aria-label="Toggle Theme"
-      >
-        <i
-          data-lucide="sun-moon"
-          class="w-5 h-5 text-gray-700 dark:text-gray-400"
-        ></i>
-      </button>
+  </div>
+  <footer id="footer"
+    class="text-center text-xs text-gray-500 mt-10 fixed bottom-0 right-0 px-2 pt-2 text-xs text-gray-600 z-[9999]">
+    <!-- Section: Footer -->
+    <!-- <p>Mohamad Masri, Oldenburg – 28.01.2024</p> -->
+    <!-- <p>Mohamad Masri, Oldenburg – 26.04.2025</p> -->
+    <div class="print-signature">
+      <a href="https://resume.masri.blog" target="_blank" rel="noopener noreferrer">https://resume.masri.blog</a>
     </div>
-  </body>
+  </footer>
+ 
+  <div class="fixed top-4 right-4 flex flex-col space-y-3 no-print">  <!-- Print and Download Buttons -->
+    <button onClick="switchLanguage()"
+      class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
+      aria-label="Switch Language">
+      <i data-lucide="languages" class="w-5 h-5 text-gray-700 dark:text-gray-400"></i>
+    </button>
+
+    <button id="theme-toggle"
+      class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
+      aria-label="Toggle Theme">
+      <i data-lucide="sun-moon" class="w-5 h-5 text-gray-700 dark:text-gray-400"></i>
+    </button>
+
+    <button onClick="window.print()"
+      class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
+      aria-label="Print Page">
+      <i data-lucide="Printer" class="w-5 h-5 text-gray-700 dark:text-gray-400"></i>
+    </button>
+
+    <button onclick="downloadPdfHandler()" id="downloadPdf"
+      class="flex items-center justify-center p-2 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500 transition-colors duration-200"
+      aria-label="Download Page">
+      <i data-lucide="Download" class="w-5 h-5 text-gray-700 dark:text-gray-400"></i>
+    </button>
+  </div>
+</body>
+
 </html>
-<!-- Development version -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
 <!-- Production version -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
@@ -720,4 +500,61 @@
     const savedLang = localStorage.getItem("lang") || "en";
     applyLanguage(savedLang);
   });
+</script>
+
+<!-- Download Function -->
+<script>
+  function downloadPdfHandler() {
+    const resumeElement = document.getElementById("resumeContent");
+
+    document.body.classList.add("pdf-export-active");
+
+    html2canvas(resumeElement, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: window
+        .getComputedStyle(document.body)
+        .getPropertyValue("background-color"),
+    })
+      .then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({
+          orientation: "portrait",
+          unit: "pt",
+          format: "a4",
+        });
+
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = pdf.internal.pageSize.getHeight();
+
+        const bottomMargin = 10;
+
+        const usablePdfPageHeight = pdfHeight - bottomMargin;
+
+        const imgHeightInPdf = (imgProps.height * pdfWidth) / imgProps.width;
+
+        let heightLeft = imgHeightInPdf;
+        let position = 0;
+
+        // Add the first page
+        pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeightInPdf);
+        heightLeft -= usablePdfPageHeight;
+
+        while (heightLeft > 0) {
+          position = heightLeft - imgHeightInPdf;
+          pdf.addPage();
+          pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeightInPdf);
+          heightLeft -= usablePdfPageHeight;
+        }
+        pdf.save("01-CV-Mohamad-Masri.pdf");
+      })
+      .catch((err) => {
+        console.error("Error generating PDF:", err);
+      })
+      .finally(() => {
+        document.body.classList.remove("pdf-export-active");
+      });
+  }
 </script>
