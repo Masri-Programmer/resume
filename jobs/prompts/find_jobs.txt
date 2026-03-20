@@ -1,0 +1,16 @@
+Act as an expert Executive Recruiter. Please analyze my @index.html resume and use your web search/Indeed connector to find the best relative job openings currently available in Germany or Remotely.
+
+CRITICAL INSTRUCTIONS FOR DEDUPLICATION AND OUTPUT:
+1. First, read the existing table in @jobs/job_matches.txt.
+2. You must NOT include any job postings, companies, or specific roles that are already listed in that file. Only find brand-new, unique opportunities.
+3. Present the top new matching results in a highly structured, professional Markdown table with the following columns:
+   - Job Title
+   - Company Name
+   - Location (Specific city/state or Remote)
+   - Job Type (Full-time / Part-time / Contract / Remote)
+   - Match Score (out of 10): How well my resume aligns with the job requirements.
+   - Match Justification: A brief 1-sentence explanation of why you gave this score.
+   - Skill Gap: 1-2 key skills required for the job that are missing or weak in my resume.
+   - Salary Range: (If mentioned in the job post).
+   - Apply Link: Direct link to the job posting.
+4. Output the final result by appending the new Markdown table rows directly to the bottom of the @job_matches.txt file. Do not overwrite the existing file; just append the new data.
