@@ -42,6 +42,40 @@ a:hover {
     display: none !important;
   }
 
+  body {
+    background: white !important;
+    font-size: 10pt !important;
+  }
+
+  #resumeContent {
+    width: 100% !important;
+    padding: 10mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  section {
+    margin-bottom: 0.5rem !important;
+  }
+
+  h2 {
+    margin-bottom: 0.25rem !important;
+    font-size: 1.25rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  ul {
+    margin-top: 0.25rem !important;
+  }
+
+  li {
+    margin-bottom: 0.1rem !important;
+  }
+
   /* Show print signature */
   .print-signature {
     display: block;
@@ -62,7 +96,7 @@ a:hover {
 
     /* Specific color adjustment for blue links in print */
     a.text-blue-200 {
-      color: #bee3f8; /* Keep the light blue color if needed, or adjust */
+      color: #1a365d; /* Darker blue for better print contrast */
     }
   }
 }
