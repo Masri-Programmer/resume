@@ -1,16 +1,16 @@
-Act as an expert Executive Recruiter. Please analyze my @index.html resume and use your web search/Indeed connector to find the best relative job openings currently available in Germany or Remotely.
+Agieren Sie als Experte für Executive Recruiting. Bitte analysieren Sie meinen Lebenslauf in `@index.html` und nutzen Sie Ihre Web-Suche/Indeed-Anbindung, um die besten relevanten Stellenangebote zu finden, die derzeit in Deutschland oder Remote verfügbar sind.
 
-CRITICAL INSTRUCTIONS FOR DEDUPLICATION AND OUTPUT:
-1. First, read the existing table in @jobs/job_matches.txt.
-2. You must NOT include any job postings, companies, or specific roles that are already listed in that file. Only find brand-new, unique opportunities.
-3. Present the top new matching results in a highly structured, professional Markdown table with the following columns:
+KRITISCHE ANWEISUNGEN FÜR DUPLIKATSPRÜFUNG UND AUSGABE:
+1. Lesen Sie zuerst die bestehende Tabelle in `@jobs/job_matches.md`.
+2. Sie dürfen KEINE Stellenanzeigen, Unternehmen oder spezifischen Rollen aufnehmen, die bereits in dieser Datei aufgeführt sind. Finden Sie nur brandneue, einzigartige Gelegenheiten.
+3. Präsentieren Sie die besten neuen Treffer in einer hochstrukturierten, professionellen Markdown-Tabelle mit den folgenden Spalten:
    - Job Title
    - Company Name
-   - Location (Specific city/state or Remote)
-   - Job Type (Full-time / Part-time / Contract / Remote)
-   - Match Score (out of 10): How well my resume aligns with the job requirements.
-   - Match Justification: A brief 1-sentence explanation of why you gave this score.
-   - Skill Gap: 1-2 key skills required for the job that are missing or weak in my resume.
-   - Salary Range: (If mentioned in the job post).
-   - Apply Link: Direct link to the job posting.
-4. Output the final result by appending the new Markdown table rows directly to the bottom of the @job_matches.txt file. Do not overwrite the existing file; just append the new data.
+   - Location (Spezifische Stadt/Bundesland oder Remote)
+   - Job Type (Vollzeit / Teilzeit / Freiberuflich / Remote)
+   - Match Score (von 10): Wie gut mein Lebenslauf mit den Anforderungen übereinstimmt.
+   - Match Justification: Eine kurze 1-Satz-Erklärung, warum Sie diese Punktzahl vergeben haben.
+   - Skill Gap: 1-2 Schlüsselqualifikationen, die für den Job erforderlich sind, aber in meinem Lebenslauf fehlen oder schwach ausgeprägt sind.
+   - Salary Range: (Falls in der Anzeige erwähnt).
+   - Apply Link: Direkter Link zur Stellenausschreibung.
+4. Geben Sie das Endergebnis aus, indem Sie die neuen Markdown-Tabellenzeilen direkt am Ende der Datei `@jobs/job_matches.md` anhängen. Überschreiben Sie die vorhandene Datei nicht; hängen Sie nur die neuen Daten an.

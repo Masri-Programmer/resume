@@ -1,27 +1,3 @@
-Here is the updated version of your prompt.
-
-Understanding Your Request
-You want to modify the previous cover letter prompt so that it focuses on generating a single, highly tailored cover letter for one specific job, rather than processing three jobs at once.
-
-Overview of the Solution
-I have scaled back the prompt from a multi-job generator to a single-job generator. This is actually a great strategic move—when you ask an AI to focus on just one job description at a time, it dedicates all of its context window and reasoning capabilities to that specific text, usually resulting in a much deeper, more personalized, and less generic output.
-
-Categorized Feedback
-Overall feedback: The prompt is now perfectly streamlined for a one-to-one application process. All the excellent formatting and stylistic constraints from your original prompts remain intact.
-
-Spelling edits: * No spelling errors were present.
-
-Grammar edits: * I shifted all phrasing from plural/distributive (e.g., "für jede dieser 3 Stellen", "jedes Anschreiben") to singular ("für diese Stelle", "das Anschreiben").
-
-Structural suggestions: * I simplified the # Gewünschtes Ausgabeformat and # Eingaben sections, removing the list of three jobs and leaving a single, clean input block for the job description.
-
-Opportunities for improvement: * Because the AI only has to write one letter now, it will have an easier time strictly adhering to the "under 300 words" constraint.
-
-Formatting guidance: * Just paste your resume and the single job description into the brackets at the very bottom.
-
-The Edited Text (Single-Job Prompt)
-Here is your revised prompt, translated into professional German and optimized for one job:
-
 # Rolle
 Handeln Sie als fachkundiger Tech-Recruiter und professioneller Werbetexter mit Spezialisierung auf Anschreiben für Entwickler.
 
@@ -40,9 +16,9 @@ Ich werde Ihnen meinen aktuellen Lebenslauf sowie eine spezifische Stellenbeschr
 
 5. **Kompakt & Prägnant:** Halten Sie das Anschreiben kurz, überzeugend und strikt unter 300 Wörtern (maximal 3-4 Absätze).
 
-6. **Handlungsorientierter Schluss:** Enden Sie mit einem starken Call-to-Action und der klaren Motivation, zu den spezifischen Zielen des Teams beizutragen.
+6. **Handlungsorientierter Schluss:** Enden Sie mit einem starken Call-to-Action und der klaren Motivation, zu den spezifischen Zielen des Teams beizutage.
 
-7. **PDF-Generierung:** Nutzen Sie Ihre Werkzeuge (z. B. LibreOffice), um das finale Anschreiben direkt als PDF-Datei zu speichern.
+7. **PDF-Generierung:** Nutzen Sie Ihre Werkzeuge, um das finale Anschreiben direkt als PDF-Datei zu speichern.
    - **Speicherort:** `/jobs/cover_letters/`
    - **Namensschema:** `JJJJ-MM-TT_NameDerFirma.pdf` (z. B. `2026-03-20_SMed.pdf`).
 
@@ -54,7 +30,5 @@ Bitte strukturieren Sie Ihre Antwort wie folgt:
 3. Eine kurze "Strategie-Notiz": 2-3 Stichpunkte, die erklären, warum Sie bestimmte Erfahrungen hervorgehoben haben, sowie Hinweise auf eventuelle Platzhalter (wie Ansprechpartner), die noch manuell geprüft werden müssen.
 
 # Eingaben
-
-Mein Lebenslauf
-
-Stellenbeschreibung
+- Mein Lebenslauf
+- Stellenbeschreibung
