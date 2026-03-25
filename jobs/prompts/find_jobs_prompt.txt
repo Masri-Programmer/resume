@@ -1,16 +1,13 @@
-Agieren Sie als Experte für Executive Recruiting. Bitte analysieren Sie meinen Lebenslauf in `@index.html` und nutzen Sie Ihre Web-Suche/Indeed-Anbindung, um die besten relevanten Stellenangebote zu finden, die derzeit in Deutschland oder Remote verfügbar sind.
+Agieren Sie als Experte für Executive Recruiting. Analysieren Sie meinen Lebenslauf in `@index.html` und nutzen Sie Ihre Web-Suche, um die besten relevanten Stellenangebote zu finden, die derzeit in Deutschland oder Remote verfügbar sind.
 
-KRITISCHE ANWEISUNGEN FÜR DUPLIKATSPRÜFUNG UND AUSGABE:
-1. Lesen Sie zuerst die bestehende Tabelle in `@jobs/job_matches.md`.
-2. Sie dürfen KEINE Stellenanzeigen, Unternehmen oder spezifischen Rollen aufnehmen, die bereits in dieser Datei aufgeführt sind. Finden Sie nur brandneue, einzigartige Gelegenheiten.
-3. Präsentieren Sie die besten neuen Treffer in einer hochstrukturierten, professionellen Markdown-Tabelle mit den folgenden Spalten:
-   - Job Title
-   - Company Name
-   - Location (Spezifische Stadt/Bundesland oder Remote)
-   - Job Type (Vollzeit / Teilzeit / Freiberuflich / Remote)
-   - Match Score (von 10): Wie gut mein Lebenslauf mit den Anforderungen übereinstimmt.
-   - Match Justification: Eine kurze 1-Satz-Erklärung, warum Sie diese Punktzahl vergeben haben.
-   - Skill Gap: 1-2 Schlüsselqualifikationen, die für den Job erforderlich sind, aber in meinem Lebenslauf fehlen oder schwach ausgeprägt sind.
-   - Salary Range: (Falls in der Anzeige erwähnt).
-   - Apply Link: Direkter Link zur Stellenausschreibung.
-4. Geben Sie das Endergebnis aus, indem Sie die neuen Markdown-Tabellenzeilen direkt am Ende der Datei `@jobs/job_matches.md` anhängen. Überschreiben Sie die vorhandene Datei nicht; hängen Sie nur die neuen Daten an.
+KRITISCHE ANWEISUNGEN FÜR STRUKTUR, STATUS UND DUPLIKATSPRÜFUNG:
+
+1. Bestand & Status prüfen: Lesen Sie zuerst die vorhandene Tabelle in `@jobs/job_matches.md`. Sie dürfen KEINE Stellenanzeigen, Unternehmen oder Rollen aufnehmen, die dort bereits gelistet sind – unabhängig davon, ob sie mit `🔵 [Submitted]` oder einem anderen Status markiert sind. Finden Sie ausschließlich neue, einzigartige Gelegenheiten.
+2. Nahtlose Integration: Die Ausgabe muss in reinem, fehlerfreiem Markdown erfolgen. Erstellen Sie keine neue Tabellenüberschrift. Generieren Sie die neuen Treffer ausschließlich als Datenzeilen, die exakt in das bestehende Schema passen und als fortlaufende Zeilen angehängt werden können.
+3. Spaltenstruktur (Prettified):
+   | Job Title | Company Name | Location | Job Type | Status | Match Score (0-10) | Match Justification | Skill Gap | Salary Range | Apply Link |
+4. Status-Zuweisung mit Emojis: Setzen Sie in der Spalte "Status" für alle neu gefundenen Jobs zwingend den Wert `🟢 [New]`. 
+5. Inhaltliche Präzision:
+   - Match Justification: Nur ein prägnanter Satz zur Eignung (Fokus auf VILT-Stack und Senior-Level).
+   - Skill Gap: Maximal 1-2 spezifische Qualifikationen, die im Lebenslauf fehlen.
+6. Ausführung: Hängen Sie die neuen Markdown-Zeilen direkt am Ende der Datei `@jobs/job_matches.md` an. Überschreiben Sie nichts und stellen Sie sicher, dass keine Leerzeilen die Tabellenstruktur unterbrechen.
