@@ -1,16 +1,12 @@
 # 🚀 Job Interview Cheat Sheet
 
-Use this guide to keep your thoughts organized during the interview. Focus on **Value, Efficiency, and Modern Workflows**.
-
----
-
 ## 🏗️ Phase 1: The Opening (Intro & Language)
 
 **Goal:** Establish a personal connection and manage expectations early.
 
 ### **The Introduction (Elevator Pitch)**
 
-> "Vielen Dank für die Einladung. Mein Name ist **Mohamad Masri**, ich wohne in Oldenburg und arbeite aktuell als **Fullstack-Entwickler bei Meinders & Elstermann (Flyerheaven)**. Ich entwickle dort an einem modularen B2B-Framework und habe kürzlich den Fokus auf **Shopware** und **Pimcore** gelegt. Mein Alltag besteht aus Vue.js, Laravel und Tailwind – immer mit dem Ziel, die Performance zu optimieren."
+> "Vielen Dank für die Einladung. Mein Name ist **Mohamad Masri**, ich wohne in Oldenburg und arbeite aktuell als **Fullstack-Software Entwickler bei Meinders & Elstermann (Flyerheaven)**. Ich entwickle dort an einem modularen B2B-Framework und habe kürzlich den Fokus auf **Shopware** und **Pimcore** gelegt. Mein Alltag besteht aus Vue.js, Laravel und Tailwind – immer mit dem Ziel, die Performance zu optimieren."
 
 ### **The Language Disclaimer**
 
@@ -24,22 +20,27 @@ Use this guide to keep your thoughts organized during the interview. Focus on **
 
 ### **Story A: The Vite Migration (Performance)**
 
-- **Situation:** Slow Webpack-based system at Flyerheaven.
-- **Task:** Lead migration to Vite & Tailwind CSS.
-- **Action:** Implemented Vite for faster builds and cleaner styling.
-- **Result:** Ladezeiten um **15 Sekunden** reduziert (direkter Einfluss auf Conversion/Umsatz).
+_Context: The job requires scaling and modernizing._
+
+> "Ein Beispiel für meine Arbeitsweise: Bei meinem jetzigen Arbeitgeber basierte das System auf Webpack und war sehr langsam. Ich habe die **Migration zu Vite** geleitet und gleichzeitig **Tailwind CSS** eingeführt."
+>
+> "Das war technisch herausfordernd, aber das Ergebnis hat gezählt: Wir haben die Ladezeiten um **15 Sekunden** reduziert. Für einen Webshop bedeutet Geschwindigkeit direkt mehr Umsatz – und genau das brauchen die Restaurants bei euch."
 
 ### **Story B: The AI Advantage (Efficiency)**
 
-- **Situation:** Need for high efficiency and documentation.
-- **Task:** Maintain code quality while increasing speed.
-- **Action:** Using **Antigravity, Herd, and KI-Prompts** for unit tests and documentation.
-- **Result:** Routineaufgaben (Doku/Tests) werden automatisiert, Fokus liegt zu 100% auf dem Code.
+_Context: The job description explicitly asks for "Openness to AI tools"._
+
+> "In der Stellenausschreibung stand, dass ihr KI zur Effizienzsteigerung nutzt. Das passt perfekt zu mir. Ich nutze Tools wie **Antigravity, Herd und KI-Prompts**, um meine Dokumentation und Unit-Tests zu schreiben."
+>
+> "Früher war Dokumentation meine Schwäche, weil ich lieber coden wollte. Heute lasse ich die KI die Zusammenfassungen schreiben. Das macht mich schneller und hält den Code trotzdem sauber für das ganze Team."
 
 ### **Story C: Infrastructure (Ownership)**
 
-- **Expertise:** Manage own Linux infrastructure (**Docker, Uberspace, Uptime Kuma**).
-- **Impact:** I understand the full lifecycle – from writing code to hosting and maintaining it.
+_Context: Prove you aren't just a frontend dev, but understand the full stack/hosting._
+
+> "Neben meiner Anstellung manage ich als Freelancer meine eigene Linux-Infrastruktur mit **Docker und Uberspace**. Ich weiß also nicht nur, wie man Code schreibt, sondern auch, wie man ihn deployed und am Laufen hält. Als Freelancer habe ich schon **mehrere Online-Shops selbst gehostet**.
+
+Ich nutze auch **Open-Source-Software** – zum Beispiel ERP-Systeme und CMS –, um mein eigenes Geschäft zu organisieren. Ich weiß also genau, wie man Software installiert, wartet und sicher am Laufen hält."
 
 ---
 
@@ -61,15 +62,20 @@ Use this guide to keep your thoughts organized during the interview. Focus on **
 
 ### **Under Pressure**
 
-- **Strategy:** Automate and Use Templates.
-- **Tools:** Obsidian (Vorlagen), Kimai (Timeboxing), Uptime Kuma (Monitoring).
-- **Message:** "Ich nutze KI, um Routineaufgaben zu managen, damit ich mich im Notfall voll auf die Lösung konzentrieren kann."
+Wenn ich unter Zeitdruck stehe, nutze ich sofort meine gewohnten Systeme und Tools. Ich gerate nicht in Panik, sondern nutze Automatisierung, um mich besser zu konzentrieren.
+\_Für meine tägliche Arbeit benutze ich Obsidian. Ich habe Vorlagen für fast alles. So kann ich neue Aufgaben schnell anfangen und meine Gedanken ordnen, ohne Zeit zu verlieren. Außerdem benutze ich Kimai, um meine Zeit zu messen und für mein 'Timeboxing'. Das hilft mir, bei einer kurzen Deadline nicht zu viel Zeit für nur eine Aufgabe zu brauchen.
+
+Ein gutes Beispiel für plötzlichen Stress sind unerwartete Systemfehler. Ich nutze Uptime Kuma, um meine Systeme zu überwachen. Wenn eine Website nachts um 2:00 Uhr offline geht, muss ich das Problem schnell lösen. In solchen Momenten benutze ich KI-Tools wie OpenClaw. Die KI managt mein GitHub, prüft das System und schreibt die Dokumentation. Weil die KI diese Routineaufgaben macht, kann ich mich zu 100 % auf das Hauptproblem konzentrieren."
 
 ### **Weaknesses**
 
-- **Point 1:** Excessive focus on efficiency (sometimes over-engineering).
-- **Point 2:** Direct communication (avoiding small talk).
-- **Fix:** "Ich setze mir jetzt feste Zeitlimits für neue Tools und lerne, dass gute Team-Kommunikation manchmal Zeit für Austausch braucht."
+Meine größte Schwäche ist, dass ich manchmal zu sehr auf Effizienz achte. Das passiert in zwei Bereichen.
+
+Erstens bei der Technik: Manchmal baue ich Dinge, die zu komplex sind. Früher war das Entwickeln von neuen Tools wie ein Lottoticket für mich. Manchmal half es mir jeden Tag, aber manchmal habe ich viel Zeit für ein System gebraucht, das am Ende niemand benutzt hat.
+
+Zweitens bei der Kommunikation: Ich bin sehr direkt. Wenn ich ein Problem habe, möchte ich sofort zur Lösung kommen. Ich mag keine langen Gespräche oder Smalltalk.
+
+Heute mache ich das besser. Bevor ich ein neues Tool baue, frage ich mich: 'Lohnt sich das wirklich?' Und ich setze mir ein festes Zeitlimit. In der Kommunikation mit meinem Team versuche ich, geduldiger zu sein. Ich weiß jetzt, dass gute Teamarbeit manchmal einfach etwas mehr Zeit zum Reden braucht, um die beste Lösung zu finden.
 
 ---
 
@@ -77,13 +83,15 @@ Use this guide to keep your thoughts organized during the interview. Focus on **
 
 ### **The Salary Strategy**
 
-- **Ask first:** "Welchen Rahmen habt ihr für diese Position vorgesehen?"
-- **Target:** 45k - 50k (Base your number on current research).
+- **Salary Strategy:** Try to make them say a number first.
+  > "Ich habe mich über den Markt informiert. Da die Rolle aber sehr spezifisch ist, würde ich gerne wissen, welchen Rahmen ihr für diese Position vorgesehen habt?"
+- _If forced to give a number:_ State your researched number (e.g., 45k - 50k).
+- **The Closing:**
+  > "Vielen Dank für das Gespräch. Ich fasse es mal so zusammen: Ich bringe den passenden **Tech-Stack** (Vue/Laravel) mit, ich brenne für die **Mission**, Restaurants zu befreien, und ich nutze moderne **KI-Workflows**. Ich habe das Gefühl, das passt sehr gut."
 
 ### **Notice Period**
 
-- **Official:** 3 months.
-- **Actual:** 1 month possible (via Aufhebungsvertrag).
+Meine offizielle Kündigungsfrist beträgt drei Monate. Ich habe aber bereits offen mit meinem jetzigen Arbeitgeber gesprochen. Wir haben uns geeinigt, dass ich schon nach einem Monat gehen kann, zum Beispiel durch einen Aufhebungsvertrag. Deshalb stehe ich Ihnen schon in einem Monat zur Verfügung.
 
 ### **Closing Statement**
 
